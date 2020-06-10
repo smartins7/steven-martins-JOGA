@@ -1,0 +1,23 @@
+{
+  "proxy": "http://localhost:5000/",
+  "name": "client",
+  "version": "1.0.0",
+  "description": "JOGA",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "react-switch": "^5.0.1",
+    "uuid": "^8.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "Steven",
+  "license": "ISC"
+}

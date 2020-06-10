@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "Soccer",
+    "location": "Vancouver, CA",
+    "games": [
+      {
+        "gameId": "01-SOCCER-YVR",
+        "gameType": "Soccer",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "02-SOCCER-YVR",
+        "gameType": "Soccer",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "03-SOCCER-YVR",
+        "gameType": "Soccer",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "04-SOCCER-YVR",
+        "gameType": "Soccer",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Basketball",
+    "location": "Vancouver, CA",
+    "games": [
+      {
+        "gameId": "01-BASKETBALL-YVR",
+        "gameType": "Basketball",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "02-BASKETBALL-YVR",
+        "gameType": "Basketball",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "03-BASKETBALL-YVR",
+        "gameType": "Basketball",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "04-BASKETBALL-YVR",
+        "gameType": "Basketball",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Street-Hockey",
+    "location": "Vancouver, CA",
+    "games": [
+      {
+        "gameId": "01-STREETHOCKEY-YVR",
+        "gameType": "Street-Hockey",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "02-STREETHOCKEY-YVR",
+        "gameType": "Street-Hockey",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "03-STREETHOCKEY-YVR",
+        "gameType": "Street-Hockey",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      },
+      {
+        "gameId": "04-STREETHOCKEY-YVR",
+        "gameType": "Street-Hockey",
+        "date": "June 26, 2020",
+        "time": "6:30 pm",
+        "park": "Memorial Park Turf",
+        "address": "5955 Ross Street, V5W 1T7",
+        "city": "Vancouver, BC",
+        "description": "Looking three people to get a mini 3 vs. 3 game going",
+        "eventStatus": "Full/Vacant",
+        "organizer": "Steven",
+        "contact": "(604)-777-7777",
+        "email": "steven@brainstation.io"
+      }
+    ]
+  }
+]
