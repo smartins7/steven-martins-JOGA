@@ -11,5 +11,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req,res)=> {
+res.send('hello');
+}
+
+
 // Local Host
 app.listen(5000, console.log("app is listening at: http://localhost:5000"));

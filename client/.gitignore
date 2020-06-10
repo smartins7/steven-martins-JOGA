@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# CSS.MAP
-*.css.map
-
 # production
 /build
 
