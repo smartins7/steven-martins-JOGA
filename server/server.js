@@ -46,7 +46,7 @@ app
   });
 app.put("/soccer/:id", (req, res) => {
   const gamesArray = getGames();
-  let gameId = req.body.gameId;
+  let gameId = req.params.id;
 
   for (i = 0; i < gamesArray.length; i++) {
     let eventsArray = gamesArray[i].events;
@@ -99,10 +99,10 @@ app
     const gamesArray = getGames();
     let gamesId = uuidv4();
     console.log(gamesId);
-    let games = gamesArray.filter((games) => games.id == gamesId)[1];
-    const basketballObject = {
-      gameId: req.body.gamesId,
-      date: req.body.date,
+    let gameIndex = gamesArray.findIndex((games) => games.name == "Basketball");
+    const soccerObject = {
+      gameId: gamesId,
+      date: new Date(),
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -113,52 +113,52 @@ app
       contact: req.body.contact,
       email: req.body.email,
     };
-    games.events.push(basketballObject);
+    gamesArray[gameIndex].events.push(soccerObject);
     fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-    res.json(gamesArray);
-  })
-  .put((req, res) => {
-    const gamesArray = getGames();
-    let gameId = req.body.gameId;
-
-    for (i = 0; i < gamesArray.length; i++) {
-      let eventsArray = gamesArray[i].events;
-      for (j = 0; j < eventsArray.length; j++) {
-        if (gameId === eventsArray[j].gameId) {
-          eventsArray[j].gameId = req.body.gameId;
-          eventsArray[j].gameType = req.body.gameType;
-          eventsArray[j].date = req.body.date;
-          eventsArray[j].time = req.body.time;
-          eventsArray[j].park = req.body.park;
-          eventsArray[j].address = req.body.address;
-          eventsArray[j].city = req.body.city;
-          eventsArray[j].description = req.body.description;
-          eventsArray[j].eventStatus = req.body.eventStatus;
-          eventsArray[j].organizer = req.body.organizer;
-          eventsArray[j].contact = req.body.contact;
-          eventsArray[j].email = req.body.email;
-        }
-      }
-    }
-    fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-    res.json(gamesArray);
+    res.json(soccerObject);
   });
-
-app.delete("/basketball/:id", (req, res) => {
+app.put("/basketball/:id", (req, res) => {
   const gamesArray = getGames();
-  let eventId = req.params.id;
+  let gameId = req.params.id;
+
   for (i = 0; i < gamesArray.length; i++) {
-    let eventsArray = gamesArray[i].products;
-    let updatedEvents = [];
+    let eventsArray = gamesArray[i].events;
     for (j = 0; j < eventsArray.length; j++) {
-      if (eventsArray[j].eventId !== eventId) {
-        updatedEvents.push(eventsArray[j]);
+      if (gameId === eventsArray[j].gameId) {
+        eventsArray[j].date = req.body.date;
+        eventsArray[j].time = req.body.time;
+        eventsArray[j].park = req.body.park;
+        eventsArray[j].address = req.body.address;
+        eventsArray[j].city = req.body.city;
+        eventsArray[j].description = req.body.description;
+        eventsArray[j].eventStatus = req.body.eventStatus;
+        eventsArray[j].organizer = req.body.organizer;
+        eventsArray[j].contact = req.body.contact;
+        eventsArray[j].email = req.body.email;
       }
     }
-    gamesArray[i].events = updatedEvents;
   }
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
   res.json(gamesArray);
+});
+
+app.delete("/basketball/:id", (req, res) => {
+  const gamesArray = getGames();
+  let gameId = req.params.id;
+  let updatedEvents = [];
+  for (i = 0; i < gamesArray.length; i++) {
+    let eventsArray = gamesArray[i].events;
+
+    for (j = 0; j < eventsArray.length; j++) {
+      if (eventsArray[j].gameId !== gameId) {
+        updatedEvents.push(eventsArray[j]);
+      }
+    }
+    console.log(updatedEvents);
+    gamesArray[i].events = updatedEvents;
+  }
+  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  res.json(updatedEvents);
 });
 
 // Get, Post, Put and Delete Street Hockey Event Details
@@ -172,10 +172,12 @@ app
     const gamesArray = getGames();
     let gamesId = uuidv4();
     console.log(gamesId);
-    let games = gamesArray.filter((games) => games.id == gamesId)[2];
-    const hockeyObject = {
-      gameId: req.body.gamesId,
-      date: req.body.date,
+    let gameIndex = gamesArray.findIndex(
+      (games) => games.name == "Street-Hockey"
+    );
+    const soccerObject = {
+      gameId: gamesId,
+      date: new Date(),
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -186,52 +188,52 @@ app
       contact: req.body.contact,
       email: req.body.email,
     };
-    games.events.push(hockeyObject);
+    gamesArray[gameIndex].events.push(soccerObject);
     fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-    res.json(gamesArray);
-  })
-  .put((req, res) => {
-    const gamesArray = getGames();
-    let gameId = req.body.gameId;
-
-    for (i = 0; i < gamesArray.length; i++) {
-      let eventsArray = gamesArray[i].events;
-      for (j = 0; j < eventsArray.length; j++) {
-        if (gameId === eventsArray[j].gameId) {
-          eventsArray[j].gameId = req.body.gameId;
-          eventsArray[j].gameType = req.body.gameType;
-          eventsArray[j].date = req.body.date;
-          eventsArray[j].time = req.body.time;
-          eventsArray[j].park = req.body.park;
-          eventsArray[j].address = req.body.address;
-          eventsArray[j].city = req.body.city;
-          eventsArray[j].description = req.body.description;
-          eventsArray[j].eventStatus = req.body.eventStatus;
-          eventsArray[j].organizer = req.body.organizer;
-          eventsArray[j].contact = req.body.contact;
-          eventsArray[j].email = req.body.email;
-        }
-      }
-    }
-    fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-    res.json(gamesArray);
+    res.json(soccerObject);
   });
-
-app.delete("/street-hockey/:id", (req, res) => {
+app.put("/street-hockey/:id", (req, res) => {
   const gamesArray = getGames();
-  let eventId = req.params.id;
+  let gameId = req.params.id;
+
   for (i = 0; i < gamesArray.length; i++) {
-    let eventsArray = gamesArray[i].products;
-    let updatedEvents = [];
+    let eventsArray = gamesArray[i].events;
     for (j = 0; j < eventsArray.length; j++) {
-      if (eventsArray[j].eventId !== eventId) {
-        updatedEvents.push(eventsArray[j]);
+      if (gameId === eventsArray[j].gameId) {
+        eventsArray[j].date = req.body.date;
+        eventsArray[j].time = req.body.time;
+        eventsArray[j].park = req.body.park;
+        eventsArray[j].address = req.body.address;
+        eventsArray[j].city = req.body.city;
+        eventsArray[j].description = req.body.description;
+        eventsArray[j].eventStatus = req.body.eventStatus;
+        eventsArray[j].organizer = req.body.organizer;
+        eventsArray[j].contact = req.body.contact;
+        eventsArray[j].email = req.body.email;
       }
     }
-    gamesArray[i].events = updatedEvents;
   }
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
   res.json(gamesArray);
+});
+
+app.delete("/street-hockey/:id", (req, res) => {
+  const gamesArray = getGames();
+  let gameId = req.params.id;
+  let updatedEvents = [];
+  for (i = 0; i < gamesArray.length; i++) {
+    let eventsArray = gamesArray[i].events;
+
+    for (j = 0; j < eventsArray.length; j++) {
+      if (eventsArray[j].gameId !== gameId) {
+        updatedEvents.push(eventsArray[j]);
+      }
+    }
+    console.log(updatedEvents);
+    gamesArray[i].events = updatedEvents;
+  }
+  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  res.json(updatedEvents);
 });
 
 // Local Host
