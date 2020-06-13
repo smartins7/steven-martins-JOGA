@@ -24,8 +24,7 @@ app
   })
   .post((req, res) => {
     const gamesArray = getGames();
-    let gamesId = uuidv4();
-    console.log(gamesId);
+    let gamesId = "00-SOCCER-YVR-" + uuidv4();
     let gameIndex = gamesArray.findIndex((games) => games.name == "Soccer");
     const soccerObject = {
       gameId: gamesId,
@@ -81,7 +80,6 @@ app.delete("/soccer/:id", (req, res) => {
         updatedEvents.push(eventsArray[j]);
       }
     }
-    console.log(updatedEvents);
     gamesArray[i].events = updatedEvents;
   }
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
@@ -97,8 +95,7 @@ app
   })
   .post((req, res) => {
     const gamesArray = getGames();
-    let gamesId = uuidv4();
-    console.log(gamesId);
+    let gamesId = "00-BASKETBALL-YVR-" + uuidv4();
     let gameIndex = gamesArray.findIndex((games) => games.name == "Basketball");
     const soccerObject = {
       gameId: gamesId,
@@ -154,7 +151,6 @@ app.delete("/basketball/:id", (req, res) => {
         updatedEvents.push(eventsArray[j]);
       }
     }
-    console.log(updatedEvents);
     gamesArray[i].events = updatedEvents;
   }
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
@@ -170,8 +166,7 @@ app
   })
   .post((req, res) => {
     const gamesArray = getGames();
-    let gamesId = uuidv4();
-    console.log(gamesId);
+    let gamesId = "00-STREETHOCKEY-YVR-" + uuidv4();
     let gameIndex = gamesArray.findIndex(
       (games) => games.name == "Street-Hockey"
     );
@@ -229,7 +224,6 @@ app.delete("/street-hockey/:id", (req, res) => {
         updatedEvents.push(eventsArray[j]);
       }
     }
-    console.log(updatedEvents);
     gamesArray[i].events = updatedEvents;
   }
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
