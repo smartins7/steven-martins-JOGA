@@ -1,0 +1,573 @@
+@font-face {
+  font-family: Roboto Regular;
+  src: url(../assets/fonts/Roboto/Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto Medium;
+  src: url(../assets/fonts/Roboto/Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto Bold;
+  src: url(../assets/fonts/Roboto/Bold.ttf);
+}
+
+@font-face {
+  font-family: Metal Mania Regular;
+  src: url(../assets/fonts/MetalMania/Regular.ttf);
+}
+
+html,
+body {
+  margin: 0;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 59vh;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(240, 160, 13, 0.959);
+  height: 23vh;
+  width: 100%;
+  border-bottom: solid 2px black;
+}
+
+.nav-bar__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Metal Mania Regular;
+  font-size: 90px;
+  line-height: 0;
+  padding: 0 1rem;
+  color: black;
+}
+
+.nav-bar__logo:hover {
+  cursor: pointer;
+}
+
+.nav-bar__lower-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: black;
+  font-family: Roboto Regular;
+  font-size: 1.5rem;
+  line-height: 0.05rem;
+  padding-bottom: 1rem;
+}
+
+.nav-bar__profile {
+  height: 3rem;
+  width: 3rem;
+  margin-left: 1rem;
+  margin-top: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-bar {
+    height: 20vh;
+    padding: 5rem 1.5rem 0;
+  }
+  .nav-bar__tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-bar__logo {
+    padding: 1rem 0;
+    margin: 0;
+    margin-right: 11.563rem;
+    font-family: Metal Mania Regular;
+    font-size: 100px;
+    line-height: 0;
+  }
+  .nav-bar__features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-bar__lower-row {
+    font-family: Roboto Regular;
+    font-size: 1.75rem;
+    line-height: 0.05rem;
+    margin-top: -19px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .nav-bar {
+    padding: 5rem 11.25rem 0;
+  }
+  .nav-bar__logo {
+    margin-right: 34.375rem;
+  }
+}
+
+.hero__container {
+  padding: 3.5rem 1rem 1.25rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 13, 13, 0.5)), to(rgba(14, 13, 13, 0.5))), url(.././assets/images/court.jpg);
+  background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(14, 13, 13, 0.5)), url(.././assets/images/court.jpg);
+  width: 100%;
+  height: 68vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__slogan {
+  font-family: Metal Mania Regular;
+  font-size: 45px;
+  line-height: 2rem;
+  border-bottom: solid 10px rgba(240, 160, 13, 0.959);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.hero__description {
+  font-family: Roboto Regular;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  padding-top: 50px;
+  color: #fafafa;
+  text-align: center;
+  max-width: 400px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__container {
+    padding: 0 1.5rem;
+    padding-top: 4rem;
+  }
+  __slogan {
+    font-family: Metal Mania Regular;
+    font-size: 50px;
+    line-height: 2rem;
+  }
+  __description {
+    font-family: Roboto Regular;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero__container {
+    padding: 0 11.25rem;
+    padding-top: 2rem;
+  }
+}
+
+.hero-soccer__container {
+  padding: 1rem 1rem 1.25rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 13, 13, 0.5)), to(rgba(14, 13, 13, 0.5))), url(.././assets/images/soccershot.jpg);
+  background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(14, 13, 13, 0.5)), url(.././assets/images/soccershot.jpg);
+  width: 100%;
+  height: 55vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-soccer__slogan {
+  font-family: Metal Mania Regular;
+  font-size: 45px;
+  line-height: 2rem;
+  border-bottom: solid 10px rgba(240, 160, 13, 0.959);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.hero-soccer__description {
+  font-family: Roboto Regular;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  padding-top: 10px;
+  color: #fafafa;
+  text-align: center;
+  max-width: 400px;
+}
+
+label {
+  font-family: Roboto Regular;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+.soccer {
+  padding: 2rem 1rem 0;
+  background-color: #e1e1e1;
+}
+
+.soccer__tablet {
+  display: none;
+}
+
+.soccer__shrink {
+  overflow: hidden;
+  display: 2 vertical;
+}
+
+.soccer__title {
+  font-family: Roboto Bold;
+  font-size: 1.75rem;
+  line-height: 1.375rem;
+  padding-bottom: 1rem;
+}
+
+.soccer__product {
+  text-decoration: none;
+  font-family: Roboto Medium;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding-bottom: 1rem;
+}
+
+.soccer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1.5px solid black;
+}
+
+.soccer__product-name {
+  color: black;
+  font-weight: bold;
+  font-family: Roboto Medium;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  cursor: pointer;
+}
+
+.soccer__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.soccer__product-margin, .soccer__options {
+  margin-top: 1.5rem;
+}
+
+.soccer__options {
+  padding-right: 0.25rem;
+  height: 0;
+}
+
+.soccer__arrow {
+  padding-left: 175px;
+  padding-top: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-soccer__container {
+    padding: 0 1.5rem;
+    padding-top: 4rem;
+  }
+  __slogan {
+    font-family: Metal Mania Regular;
+    font-size: 50px;
+    line-height: 2rem;
+  }
+  __description {
+    font-family: Roboto Regular;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  p,
+  label {
+    margin: unset;
+    font-family: Roboto Regular;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  .soccer {
+    padding: 3rem 1.5rem;
+  }
+  .soccer__mobile {
+    display: none;
+  }
+  .soccer__search {
+    margin-top: 1.5rem;
+  }
+  .soccer__product {
+    padding-bottom: unset;
+  }
+  .soccer__container {
+    height: auto;
+    padding: 1.5rem 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .soccer__product-name {
+    color: black;
+    font-weight: bold;
+    font-family: Roboto Medium;
+    font-size: 1.2rem;
+    line-height: 1.375rem;
+    padding-bottom: 10px;
+  }
+  .soccer__tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+  .soccer__tablet-item {
+    width: 8rem;
+  }
+  .soccer__tablet-item {
+    width: 12.1875rem;
+  }
+  .soccer__tablet-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 12.1875rem;
+  }
+  .soccer__tablet-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .soccer__flex {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .soccer__top-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .soccer__title {
+    font-family: Roboto Bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding-bottom: unset;
+  }
+  .soccer__options {
+    padding-bottom: 2.75rem;
+  }
+  .soccer__arrow {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-soccer__container {
+    padding: 0 11.25rem;
+    padding-top: 2rem;
+  }
+  .soccer {
+    padding: 2.5rem 11.25rem;
+  }
+  .soccer__title {
+    padding-top: 0.5rem;
+  }
+  .soccer__container {
+    height: auto;
+  }
+  .soccer__shrink {
+    line-clamp: 1;
+  }
+  .soccer__tablet-product {
+    width: 17.75rem;
+  }
+  .soccer__tablet-item {
+    width: 10.5625rem;
+  }
+  .soccer__remove {
+    right: 180px;
+  }
+}
+
+.footer {
+  border-top: solid 2px black;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 1rem;
+  background-color: rgba(240, 160, 13, 0.959);
+  height: 75px;
+  width: 100%;
+}
+
+.footer__icons {
+  height: 3rem;
+  width: 3rem;
+}
+
+.footer__icons:hover {
+  cursor: pointer;
+}
+
+.footer__icons-names {
+  display: none;
+}
+
+.footer__icons-names:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer__container {
+    height: 11vh;
+    padding: 0 1.5rem;
+  }
+  .footer__icons {
+    height: 4rem;
+    width: 4rem;
+  }
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer__icons-names {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Metal Mania Regular;
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+    margin-top: 1rem;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer__container {
+    padding: 0 11.25rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,72 @@
+//Footer for Mobile
+
+.footer {
+  border-top: solid 2px $black;
+  //   position: fixed;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+    background-color: $orange;
+    height: 75px;
+    width: 100%;
+  }
+
+  &__icons {
+    height: 3rem;
+    width: 3rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icons-names {
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//Footer for Tablet
+
+@include tablet {
+  .footer {
+    &__container {
+      height: 11vh;
+      padding: 0 1.5rem;
+    }
+
+    &__icons {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__icons-names {
+      display: flex;
+      @include logo(24px, 32px);
+      color: $black;
+      margin-top: 1rem;
+      padding-left: 10px;
+    }
+  }
+}
+
+//Footer for Desktop
+
+@include desktop {
+  .footer {
+    &__container {
+      padding: 0 11.25rem;
+    }
+  }
+}

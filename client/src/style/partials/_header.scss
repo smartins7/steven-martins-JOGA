@@ -1,0 +1,84 @@
+//Header for Mobile
+
+.nav-bar {
+  //   position: fixed;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $orange;
+  height: 23vh;
+  width: 100%;
+  border-bottom: solid 2px $black;
+
+  &__logo {
+    display: flex;
+    // justify-content: center;
+    @include logo(90px, 0);
+    padding: 0 1rem;
+    color: $black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__lower-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: $black;
+    @include paragraph(1.5rem, 0.05rem);
+    padding-bottom: 1rem;
+  }
+
+  &__profile {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+    margin-top: 8px;
+  }
+}
+
+//Header for Tablet
+
+@include tablet {
+  .nav-bar {
+    height: 20vh;
+    padding: 5rem 1.5rem 0;
+    &__tablet {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__logo {
+      padding: 1rem 0;
+      margin: 0;
+      margin-right: 11.563rem;
+      @include logo(100px, 0);
+    }
+
+    &__features {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__lower-row {
+      @include paragraph(1.75rem, 0.05rem);
+      margin-top: -19px;
+    }
+  }
+}
+
+//Header for Desktop
+
+@include desktop {
+  .nav-bar {
+    padding: 5rem 11.25rem 0;
+
+    &__logo {
+      margin-right: 34.375rem;
+    }
+  }
+}
