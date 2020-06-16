@@ -3,8 +3,11 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Soccer from "./components/Soccer";
-// import Basketball from "./components/Basketball";
-// import StreetHockey from "./components/StreetHockey";
+import SoccerDetails from "./components/SoccerDetails";
+import Basketball from "./components/Basketball";
+import BasketballDetails from "./components/BasketballDetails";
+import StreetHockey from "./components/StreetHockey";
+import StreetHockeyDetails from "./components/StreetHockeyDetails";
 
 //Setting Up Routes
 
@@ -12,12 +15,12 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/soccer" component={Soccer} />
-      {/* <Route path="/soccer/:id" component={SoccerDetails} /> */}
-      {/* <Route path="/basketball" component={Basketball} /> */}
-      {/* <Route path="/basketball/:id" component={BasketballDetails} /> */}
-      {/* <Route path="/street-hockey" component={StreetHockey} /> */}
-      {/* <Route path="/street-hockey/:id" component={StreetHockeyDetails} /> */}
+      <Route path="/soccer" exact component={Soccer} />
+      <Route path="/soccer/:id" exact component={SoccerDetails} />
+      <Route path="/basketball" exact component={Basketball} />
+      <Route path="/basketball/:id" exact component={BasketballDetails} />
+      <Route path="/street-hockey" exact component={StreetHockey} />
+      <Route path="/street-hockey/:id" exact component={StreetHockeyDetails} />
     </Switch>
   </Router>,
   document.getElementById("root")

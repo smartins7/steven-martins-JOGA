@@ -277,7 +277,6 @@ p {
 
 .soccer {
   padding: 2rem 1rem 0;
-  background-color: #e1e1e1;
 }
 
 .soccer__tablet {
@@ -287,6 +286,7 @@ p {
 .soccer__shrink {
   overflow: hidden;
   display: 2 vertical;
+  color: black;
 }
 
 .soccer__title {
@@ -296,7 +296,7 @@ p {
   padding-bottom: 1rem;
 }
 
-.soccer__product {
+.soccer__game {
   text-decoration: none;
   font-family: Roboto Medium;
   font-size: 0.875rem;
@@ -308,19 +308,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-bottom: 1.5px solid black;
-}
-
-.soccer__product-name {
-  color: black;
-  font-weight: bold;
-  font-family: Roboto Medium;
-  font-size: 1rem;
-  line-height: 1.375rem;
-  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1.5px solid #e1e1e1;
 }
 
 .soccer__flex {
@@ -333,18 +324,27 @@ p {
           flex-direction: column;
 }
 
-.soccer__product-margin, .soccer__options {
+.soccer__game-margin, .soccer__options {
   margin-top: 1.5rem;
 }
 
 .soccer__options {
   padding-right: 0.25rem;
+  margin-top: 220px;
   height: 0;
 }
 
-.soccer__arrow {
-  padding-left: 175px;
-  padding-top: 80px;
+.soccer__remove {
+  width: 156px;
+  padding: 15px;
+  right: 20px;
+  position: absolute;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -375,10 +375,7 @@ p {
   .soccer__mobile {
     display: none;
   }
-  .soccer__search {
-    margin-top: 1.5rem;
-  }
-  .soccer__product {
+  .soccer__game {
     padding-bottom: unset;
   }
   .soccer__container {
@@ -387,14 +384,6 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .soccer__product-name {
-    color: black;
-    font-weight: bold;
-    font-family: Roboto Medium;
-    font-size: 1.2rem;
-    line-height: 1.375rem;
-    padding-bottom: 10px;
   }
   .soccer__tablet {
     display: -webkit-box;
@@ -405,13 +394,13 @@ p {
             justify-content: space-between;
     padding-bottom: 0.5rem;
   }
-  .soccer__tablet-item {
-    width: 8rem;
+  .soccer__tablet-right {
+    width: 8.8rem;
   }
   .soccer__tablet-item {
     width: 12.1875rem;
   }
-  .soccer__tablet-product {
+  .soccer__tablet-game {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -459,10 +448,11 @@ p {
     padding-bottom: unset;
   }
   .soccer__options {
-    padding-bottom: 2.75rem;
+    padding-bottom: 1rem;
+    margin-top: 0;
   }
-  .soccer__arrow {
-    display: none;
+  .arrow {
+    width: 7.5rem;
   }
 }
 
@@ -483,14 +473,687 @@ p {
   .soccer__shrink {
     line-clamp: 1;
   }
-  .soccer__tablet-product {
+  .soccer__tablet-game {
     width: 17.75rem;
   }
-  .soccer__tablet-item {
+  .soccer__tablet-right {
     width: 10.5625rem;
   }
   .soccer__remove {
     right: 180px;
+  }
+  .arrow {
+    width: 10.063rem;
+  }
+}
+
+.hero-basketball__container {
+  padding: 1rem 1rem 1.25rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 13, 13, 0.5)), to(rgba(14, 13, 13, 0.5))), url(.././assets/images/bballnight.jpg);
+  background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(14, 13, 13, 0.5)), url(.././assets/images/bballnight.jpg);
+  width: 100%;
+  height: 55vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-basketball__slogan {
+  font-family: Metal Mania Regular;
+  font-size: 45px;
+  line-height: 2rem;
+  border-bottom: solid 10px rgba(240, 160, 13, 0.959);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.hero-basketball__description {
+  font-family: Roboto Regular;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  padding-top: 10px;
+  color: #fafafa;
+  text-align: center;
+  max-width: 400px;
+}
+
+label {
+  font-family: Roboto Regular;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+.basketball {
+  padding: 2rem 1rem 0;
+}
+
+.basketball__tablet {
+  display: none;
+}
+
+.basketball__shrink {
+  overflow: hidden;
+  display: 2 vertical;
+  color: black;
+}
+
+.basketball__title {
+  font-family: Roboto Bold;
+  font-size: 1.75rem;
+  line-height: 1.375rem;
+  padding-bottom: 1rem;
+}
+
+.basketball__game {
+  text-decoration: none;
+  font-family: Roboto Medium;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding-bottom: 1rem;
+}
+
+.basketball__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1.5px solid #e1e1e1;
+}
+
+.basketball__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.basketball__game-margin, .basketball__options {
+  margin-top: 1.5rem;
+}
+
+.basketball__options {
+  padding-right: 0.25rem;
+  margin-top: 220px;
+  height: 0;
+}
+
+.basketball__remove {
+  width: 156px;
+  padding: 15px;
+  right: 20px;
+  position: absolute;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-basketball__container {
+    padding: 0 1.5rem;
+    padding-top: 4rem;
+  }
+  __slogan {
+    font-family: Metal Mania Regular;
+    font-size: 50px;
+    line-height: 2rem;
+  }
+  __description {
+    font-family: Roboto Regular;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  p,
+  label {
+    margin: unset;
+    font-family: Roboto Regular;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  .basketball {
+    padding: 3rem 1.5rem;
+  }
+  .basketball__mobile {
+    display: none;
+  }
+  .basketball__game {
+    padding-bottom: unset;
+  }
+  .basketball__container {
+    height: auto;
+    padding: 1.5rem 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .basketball__tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+  .basketball__tablet-right {
+    width: 8.8rem;
+  }
+  .basketball__tablet-item {
+    width: 12.1875rem;
+  }
+  .basketball__tablet-game {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 12.1875rem;
+  }
+  .basketball__tablet-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .basketball__flex {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .basketball__top-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .basketball__title {
+    font-family: Roboto Bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding-bottom: unset;
+  }
+  .basketball__options {
+    padding-bottom: 1rem;
+    margin-top: 0;
+  }
+  .arrow {
+    width: 7.5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-basketball__container {
+    padding: 0 11.25rem;
+    padding-top: 2rem;
+  }
+  .basketball {
+    padding: 2.5rem 11.25rem;
+  }
+  .basketball__title {
+    padding-top: 0.5rem;
+  }
+  .basketball__container {
+    height: auto;
+  }
+  .basketball__shrink {
+    line-clamp: 1;
+  }
+  .basketball__tablet-game {
+    width: 17.75rem;
+  }
+  .basketball__tablet-right {
+    width: 10.5625rem;
+  }
+  .basketball__remove {
+    right: 180px;
+  }
+  .arrow {
+    width: 10.063rem;
+  }
+}
+
+.hero-hockey__container {
+  padding: 1rem 1rem 1.25rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 13, 13, 0.5)), to(rgba(14, 13, 13, 0.5))), url(.././assets/images/hockeynet.jpg);
+  background: linear-gradient(rgba(14, 13, 13, 0.5), rgba(14, 13, 13, 0.5)), url(.././assets/images/hockeynet.jpg);
+  width: 100%;
+  height: 55vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-hockey__slogan {
+  font-family: Metal Mania Regular;
+  font-size: 45px;
+  line-height: 2rem;
+  border-bottom: solid 10px rgba(240, 160, 13, 0.959);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.hero-hockey__description {
+  font-family: Roboto Regular;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  padding-top: 10px;
+  color: #fafafa;
+  text-align: center;
+  max-width: 400px;
+}
+
+label {
+  font-family: Roboto Regular;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+.hockey {
+  padding: 2rem 1rem 0;
+}
+
+.hockey__tablet {
+  display: none;
+}
+
+.hockey__shrink {
+  overflow: hidden;
+  display: 2 vertical;
+  color: black;
+}
+
+.hockey__title {
+  font-family: Roboto Bold;
+  font-size: 1.75rem;
+  line-height: 1.375rem;
+  padding-bottom: 1rem;
+}
+
+.hockey__game {
+  text-decoration: none;
+  font-family: Roboto Medium;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding-bottom: 1rem;
+}
+
+.hockey__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1.5px solid #e1e1e1;
+}
+
+.hockey__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hockey__game-margin, .hockey__options {
+  margin-top: 1.5rem;
+}
+
+.hockey__options {
+  padding-right: 0.25rem;
+  margin-top: 220px;
+  height: 0;
+}
+
+.hockey__remove {
+  width: 156px;
+  padding: 15px;
+  right: 20px;
+  position: absolute;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-hockey__container {
+    padding: 0 1.5rem;
+    padding-top: 4rem;
+  }
+  __slogan {
+    font-family: Metal Mania Regular;
+    font-size: 50px;
+    line-height: 2rem;
+  }
+  __description {
+    font-family: Roboto Regular;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  p,
+  label {
+    margin: unset;
+    font-family: Roboto Regular;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  .hockey {
+    padding: 3rem 1.5rem;
+  }
+  .hockey__mobile {
+    display: none;
+  }
+  .hockey__game {
+    padding-bottom: unset;
+  }
+  .hockey__container {
+    height: auto;
+    padding: 1.5rem 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hockey__tablet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+  .hockey__tablet-right {
+    width: 8.8rem;
+  }
+  .hockey__tablet-item {
+    width: 12.1875rem;
+  }
+  .hockey__tablet-game {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 12.1875rem;
+  }
+  .hockey__tablet-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hockey__flex {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hockey__top-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .hockey__title {
+    font-family: Roboto Bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    padding-bottom: unset;
+  }
+  .hockey__options {
+    padding-bottom: 1rem;
+    margin-top: 0;
+  }
+  .arrow {
+    width: 7.5rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-hockey__container {
+    padding: 0 11.25rem;
+    padding-top: 2rem;
+  }
+  .hockey {
+    padding: 2.5rem 11.25rem;
+  }
+  .hockey__title {
+    padding-top: 0.5rem;
+  }
+  .hockey__container {
+    height: auto;
+  }
+  .hockey__shrink {
+    line-clamp: 1;
+  }
+  .hockey__tablet-game {
+    width: 17.75rem;
+  }
+  .hockey__tablet-right {
+    width: 10.5625rem;
+  }
+  .hockey__remove {
+    right: 180px;
+  }
+  .arrow {
+    width: 10.063rem;
+  }
+}
+
+.game {
+  margin: 40px 1rem 1.5rem;
+}
+
+.game__container {
+  width: 100%;
+  margin: auto;
+}
+
+.game__label-page {
+  font-family: Roboto Bold;
+  font-size: 1.75rem;
+  line-height: auto;
+  margin-bottom: 24px;
+}
+
+.game__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 30px;
+  background-color: #267a26;
+  border-radius: 4px;
+}
+
+.game__status-text {
+  color: #ffffff;
+  font-family: Roboto Regular;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  margin-bottom: 0;
+}
+
+.game__hr {
+  visibility: hidden;
+}
+
+.game__label-description, .game__label-date, .game__label-time, .game__label-location, .game__label-address, .game__label-city, .game__label-organizer, .game__label-contact, .game__label-email {
+  font-family: Roboto Regular;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #afafaf;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.game__event-description, .game__address {
+  width: 90%;
+}
+
+.game__address {
+  margin-bottom: 40px;
+}
+
+.game p {
+  font-family: Roboto Regular;
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+}
+
+.game__edit-btn {
+  width: 288px;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: rgba(240, 160, 13, 0.959);
+  color: black;
+  font-family: Roboto Regular;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .game__container {
+    width: 720px;
+  }
+  .game__status {
+    margin-top: 25px;
+  }
+  .game__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .game__label-page {
+    margin-right: 24px;
+  }
+  .game__hr {
+    visibility: visible;
+  }
+  .game__btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .game__edit-btn {
+    margin-top: 40px;
+    width: 288px;
+  }
+  .game__info-details {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 360px 360px;
+        grid-template-columns: 360px 360px;
+  }
+  .game__label-value-container {
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .game__container {
+    width: 1080px;
+  }
+  .game__description-details-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
 }
 

@@ -1,0 +1,153 @@
+//Soccer, Basketball, and Street-Hockey Detail Section for Mobile
+.game {
+  margin: 40px 1rem 1.5rem;
+
+  &__container {
+    width: 100%;
+    margin: auto;
+  }
+
+  &__label-page {
+    @include header(1.75rem, auto);
+    margin-bottom: 24px;
+  }
+
+  &__status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(38, 122, 38);
+    border-radius: 4px;
+  }
+
+  &__status-text {
+    color: $white;
+    @include paragraph(0.813rem, 1.125rem);
+    margin-bottom: 0;
+  }
+
+  &__hr {
+    visibility: hidden;
+  }
+
+  &__label-description {
+    @include paragraph(1rem, 1.375rem);
+    color: $silver;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__event-description {
+    width: 90%;
+  }
+
+  &__label-date {
+    @extend .game__label-description;
+  }
+
+  &__label-time {
+    @extend .game__label-description;
+  }
+
+  &__label-location {
+    @extend .game__label-description;
+  }
+
+  &__label-address {
+    @extend .game__label-description;
+  }
+
+  &__address {
+    @extend .game__event-description;
+    margin-bottom: 40px;
+  }
+
+  &__label-city {
+    @extend .game__label-description;
+  }
+
+  &__label-organizer {
+    @extend .game__label-description;
+  }
+
+  &__label-contact {
+    @extend .game__label-description;
+  }
+
+  &__label-email {
+    @extend .game__label-description;
+  }
+
+  p {
+    @include paragraph(0.9rem, 1.125rem);
+  }
+
+  &__edit-btn {
+    width: 288px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid $black;
+    background-color: $orange;
+    color: $black;
+    @include paragraph(1rem, 1.125rem);
+  }
+}
+
+//Soccer, Basketball, and Street-Hockey Detail Section for Tablet
+@include tablet {
+  .game {
+    &__container {
+      width: 720px;
+    }
+
+    &__status {
+      margin-top: 25px;
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__label-page {
+      margin-right: 24px;
+    }
+
+    &__hr {
+      visibility: visible;
+    }
+
+    &__btn-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__edit-btn {
+      margin-top: 40px;
+      width: 288px;
+    }
+
+    &__info-details {
+      display: grid;
+      grid-template-columns: 360px 360px;
+    }
+
+    &__label-value-container {
+      margin-right: auto;
+    }
+  }
+}
+
+//Soccer, Basketball, and Street-Hockey Detail Section for Desktop
+@include desktop {
+  .game {
+    &__container {
+      width: 1080px;
+    }
+    &__description-details-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+}

@@ -1,10 +1,10 @@
-//Soccer Page for Mobile
+//Basketball Page for Mobile
 
-.hero-soccer {
+.hero-basketball {
   &__container {
     padding: 1rem 1rem 1.25rem;
     background: linear-gradient(($black-gradient), ($black-gradient)),
-      url(.././assets/images/soccershot.jpg);
+      url(.././assets/images/bballnight.jpg);
     width: 100%;
     height: 55vh;
     // height: 580px;
@@ -47,7 +47,7 @@ p {
   @include paragraph(0.813rem, 1.125rem);
 }
 
-.soccer {
+.basketball {
   padding: 2rem 1rem 0;
   &__tablet {
     display: none;
@@ -100,10 +100,10 @@ p {
   }
 }
 
-//Soccer Page for Tablet
+//Basketball Page for Tablet
 
 @include tablet {
-  .hero-soccer {
+  .hero-basketball {
     &__container {
       padding: 0 1.5rem;
       padding-top: 4rem;
@@ -124,7 +124,7 @@ p {
     @include paragraph(0.9rem, 1.5rem);
   }
 
-  .soccer {
+  .basketball {
     padding: 3rem 1.5rem;
 
     &__mobile {
@@ -186,17 +186,17 @@ p {
   }
 }
 
-//Soccer Page for Desktop
+//Basketball Page for Desktop
 
 @include desktop {
-  .hero-soccer {
+  .hero-basketball {
     &__container {
       padding: 0 11.25rem;
       padding-top: 2rem;
     }
   }
 
-  .soccer {
+  .basketball {
     padding: 2.5rem 11.25rem;
     &__title {
       padding-top: 0.5rem;
