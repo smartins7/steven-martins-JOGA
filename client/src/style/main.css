@@ -47,6 +47,9 @@ a {
 }
 
 .nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,6 +175,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 198px;
+  width: 100%;
 }
 
 .hero__slogan {
@@ -198,6 +203,8 @@ a {
   .hero__container {
     padding: 0 1.5rem;
     padding-top: 4rem;
+    height: 70vh;
+    margin-top: 169px;
   }
   __slogan {
     font-family: Metal Mania Regular;
@@ -214,8 +221,14 @@ a {
 @media only screen and (min-width: 1440px) {
   .hero__container {
     padding: 0 11.25rem;
-    padding-top: 2rem;
+    padding-top: 3.25rem;
+    margin-top: 170px;
   }
+}
+
+.soccer-all {
+  margin-top: 198px;
+  width: 100%;
 }
 
 .hero-soccer__container {
@@ -276,6 +289,7 @@ p {
 }
 
 .soccer {
+  margin-bottom: 120px;
   padding: 2rem 1rem 0;
 }
 
@@ -334,30 +348,20 @@ p {
   height: 0;
 }
 
-.soccer__remove {
-  width: 156px;
-  padding: 15px;
-  right: 20px;
-  position: absolute;
-  background-color: #fafafa;
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-  font-family: Roboto Regular;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-}
-
 @media only screen and (min-width: 768px) {
+  .soccer-all {
+    margin-top: 169px;
+  }
   .hero-soccer__container {
     padding: 0 1.5rem;
     padding-top: 4rem;
   }
-  __slogan {
+  .hero-soccer__slogan {
     font-family: Metal Mania Regular;
     font-size: 50px;
     line-height: 2rem;
   }
-  __description {
+  .hero-soccer__description {
     font-family: Roboto Regular;
     font-size: 2rem;
     line-height: 2.5rem;
@@ -457,6 +461,9 @@ p {
 }
 
 @media only screen and (min-width: 1440px) {
+  .soccer-all {
+    margin-top: 170px;
+  }
   .hero-soccer__container {
     padding: 0 11.25rem;
     padding-top: 2rem;
@@ -485,6 +492,11 @@ p {
   .arrow {
     width: 10.063rem;
   }
+}
+
+.basketball-all {
+  margin-top: 198px;
+  width: 100%;
 }
 
 .hero-basketball__container {
@@ -545,6 +557,7 @@ p {
 }
 
 .basketball {
+  margin-bottom: 120px;
   padding: 2rem 1rem 0;
 }
 
@@ -617,6 +630,9 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
+  .basketball-all {
+    margin-top: 169px;
+  }
   .hero-basketball__container {
     padding: 0 1.5rem;
     padding-top: 4rem;
@@ -726,6 +742,9 @@ p {
 }
 
 @media only screen and (min-width: 1440px) {
+  .basketball-all {
+    margin-top: 170px;
+  }
   .hero-basketball__container {
     padding: 0 11.25rem;
     padding-top: 2rem;
@@ -754,6 +773,11 @@ p {
   .arrow {
     width: 10.063rem;
   }
+}
+
+.hockey-all {
+  margin-top: 198px;
+  width: 100%;
 }
 
 .hero-hockey__container {
@@ -814,6 +838,7 @@ p {
 }
 
 .hockey {
+  margin-bottom: 120px;
   padding: 2rem 1rem 0;
 }
 
@@ -886,6 +911,9 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
+  .hockey-all {
+    margin-top: 169px;
+  }
   .hero-hockey__container {
     padding: 0 1.5rem;
     padding-top: 4rem;
@@ -995,6 +1023,9 @@ p {
 }
 
 @media only screen and (min-width: 1440px) {
+  .hockey-all {
+    margin-top: 170px;
+  }
   .hero-hockey__container {
     padding: 0 11.25rem;
     padding-top: 2rem;
@@ -1026,7 +1057,7 @@ p {
 }
 
 .game {
-  margin: 40px 1rem 1.5rem;
+  margin: 210px 1rem 120px;
 }
 
 .game__container {
@@ -1157,8 +1188,153 @@ p {
   }
 }
 
+.comments {
+  padding: 0.7rem 1rem 1.5rem;
+  max-width: 520px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.comments__title {
+  font-family: Roboto Medium;
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  color: black;
+}
+
+.comments-form {
+  border-bottom: 0.063rem solid #e1e1e1;
+  padding-bottom: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments-form__row-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.comments-form__profile {
+  height: 2.813rem;
+  width: 2.813rem;
+  margin-top: 1.438rem;
+}
+
+.comments-form__input-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1.25rem;
+}
+
+.comments-form__input-title {
+  font-family: Roboto Medium;
+  font-size: 0.7rem;
+  line-height: 1.563rem;
+  color: #afafaf;
+}
+
+.comments-form__content {
+  font-family: Roboto Regular;
+  font-size: 0.8rem;
+  line-height: 1.563rem;
+  border: 0.078rem solid #afafaf;
+  border-radius: 0.25rem;
+  height: 6rem;
+  padding: 0.625rem 0 0 0.625rem;
+  font-weight: bold;
+  color: black;
+  background-color: #fafafa;
+  width: 12.5rem;
+}
+
+.comments-form__content:focus {
+  border-color: rgba(240, 160, 13, 0.959);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+}
+
+.comments-form__submit {
+  width: 288px;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: rgba(240, 160, 13, 0.959);
+  color: black;
+  font-family: Roboto Regular;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.comments-form__submit:hover, .comments-form__submit:focus {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments {
+    padding: 0 2rem;
+    max-width: 768px;
+  }
+  .comments__title {
+    font-family: Roboto Medium;
+    font-size: 1.188rem;
+    line-height: 1.563rem;
+  }
+  .comments__profile {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+  .comments-form__input-title {
+    font-family: Roboto Medium;
+    font-size: 0.8rem;
+    line-height: 1.563rem;
+  }
+  .comments-form__content {
+    font-family: Roboto Regular;
+    font-size: 0.85rem;
+    line-height: 1.563rem;
+    border: 0.063rem solid #afafaf;
+    height: 2.5rem;
+    width: 27.813rem;
+    padding: 0.313rem 0 0.313rem 0.625rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .comments {
+    padding: 0;
+    padding-left: 11.55rem;
+    max-width: 1460px;
+  }
+}
+
 .footer {
   border-top: solid 2px black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer__container {
@@ -1176,7 +1352,7 @@ p {
       justify-content: space-around;
   padding: 0 1rem;
   background-color: rgba(240, 160, 13, 0.959);
-  height: 75px;
+  height: 76px;
   width: 100%;
 }
 

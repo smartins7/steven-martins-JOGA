@@ -1,5 +1,10 @@
 //Basketball Page for Mobile
 
+.basketball-all {
+  margin-top: 198px;
+  width: 100%;
+}
+
 .hero-basketball {
   &__container {
     padding: 1rem 1rem 1.25rem;
@@ -48,6 +53,7 @@ p {
 }
 
 .basketball {
+  margin-bottom: 120px;
   padding: 2rem 1rem 0;
   &__tablet {
     display: none;
@@ -103,6 +109,10 @@ p {
 //Basketball Page for Tablet
 
 @include tablet {
+  .basketball-all {
+    margin-top: 169px;
+  }
+
   .hero-basketball {
     &__container {
       padding: 0 1.5rem;
@@ -189,6 +199,10 @@ p {
 //Basketball Page for Desktop
 
 @include desktop {
+  .basketball-all {
+    margin-top: 170px;
+  }
+
   .hero-basketball {
     &__container {
       padding: 0 11.25rem;

@@ -2,7 +2,9 @@
 
 .footer {
   border-top: solid 2px $black;
-  //   position: fixed;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   &__container {
     display: flex;
     flex-direction: row;
@@ -10,7 +12,7 @@
     justify-content: space-around;
     padding: 0 1rem;
     background-color: $orange;
-    height: 75px;
+    height: 76px;
     width: 100%;
   }
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Comments from "../components/Comments";
 
 export default class SoccerDetails extends Component {
   state = {
@@ -55,13 +56,13 @@ export default class SoccerDetails extends Component {
                         <p className="game__date">{event.date}</p>
                       </div>
                       <div className="game__label-value-container">
-                        <h4 className="game__label-time">TIME</h4>
-                        <p className="game__time">{event.time}</p>
+                        <h4 className="game__label-location">LOCATION</h4>
+                        <p className="game__location">{event.park}</p>
                       </div>
                     </div>
 
-                    <h4 className="game__label-location">LOCATION</h4>
-                    <p className="game__location">{event.park}</p>
+                    <h4 className="game__label-time">TIME</h4>
+                    <p className="game__time">{event.time}</p>
 
                     <h4 className="game__label-address">ADDRESS</h4>
                     <p className="game__address">{event.address}</p>
@@ -80,12 +81,13 @@ export default class SoccerDetails extends Component {
                   </div>
                 </div>
                 <hr className="game__hr"></hr>
-                <div className="game__btn-container">
+                {/* <div className="game__btn-container">
                   <button className="game__edit-btn">EDIT</button>
-                </div>
+                </div> */}
               </div>
             );
           })}
+          <Comments />
         </div>
         <Footer />
       </>

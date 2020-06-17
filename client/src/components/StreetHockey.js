@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import FooterStreetHockey from "../components/FooterStreetHockey";
 
 import arrowIcon from "../assets/icons/SVG/Icon-arrow-right.svg";
 
@@ -44,76 +44,77 @@ export default class StreetHockey extends Component {
     return (
       <div>
         <Header />
-        <div className="hero-hockey">
-          <div className="hero-hockey__container">
-            <h1 className="hero-hockey__slogan">STREET-HOCKEY</h1>
-            <div className="hero-hockey__desktop">
-              <h2 className="hero-hockey__description">
-                Find local pick-up street-hockey games in your area below or
-                create your own.
-              </h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="hockey">
-          <div className="hockey__top-flex">
-            <h1 className="hockey__title">Vancouver, BC:</h1>
-          </div>
-          <div className="hockey__tablet">
-            <label className="hockey__tablet-item">DESCRIPTION</label>
-            <div className="hockey__tablet-stats">
-              <label className="hockey__tablet-right">DATE</label>
-              <label className="hockey__tablet-right">TIME</label>
-              <label className="hockey__tablet-right">LOCATION</label>
-              <label className="hockey__tablet-right hockey__tablet-spacing">
-                ADDRESS
-              </label>
+        <div className="hockey-all">
+          <div className="hero-hockey">
+            <div className="hero-hockey__container">
+              <h1 className="hero-hockey__slogan">STREET-HOCKEY</h1>
+              <div className="hero-hockey__desktop">
+                <h2 className="hero-hockey__description">
+                  Find local pick-up street-hockey games in your area below or
+                  create your own.
+                </h2>
+              </div>
             </div>
           </div>
 
-          {this.state.hockeyList.map((hockey) => {
-            return (
-              <div className="hockey__container" key={hockey.gameId}>
-                <div className="hockey__flex">
-                  <label className="hockey__game-margin hockey__mobile">
-                    DESCRIPTION
-                  </label>
-                  <div className="hockey__tablet-game">
+          <div className="hockey">
+            <div className="hockey__top-flex">
+              <h1 className="hockey__title">Vancouver, BC:</h1>
+            </div>
+            <div className="hockey__tablet">
+              <label className="hockey__tablet-item">DESCRIPTION</label>
+              <div className="hockey__tablet-stats">
+                <label className="hockey__tablet-right">DATE</label>
+                <label className="hockey__tablet-right">TIME</label>
+                <label className="hockey__tablet-right">LOCATION</label>
+                <label className="hockey__tablet-right hockey__tablet-spacing">
+                  ADDRESS
+                </label>
+              </div>
+            </div>
+
+            {this.state.hockeyList.map((hockey) => {
+              return (
+                <div className="hockey__container" key={hockey.gameId}>
+                  <div className="hockey__flex">
+                    <label className="hockey__game-margin hockey__mobile">
+                      DESCRIPTION
+                    </label>
+                    <div className="hockey__tablet-game">
+                      <Link
+                        key={hockey.gameId}
+                        to={`/street-hockey/${hockey.gameId}`}
+                        className="hockey__game"
+                      >
+                        <p className="hockey__shrink">{hockey.description}</p>
+                      </Link>
+                    </div>
+                    <div className="hockey__tablet-stats">
+                      <label className="hockey__mobile">DATE</label>
+                      <p className="hockey__tablet-right">{hockey.date}</p>
+                      <label className="hockey__mobile">TIME</label>
+                      <p className="hockey__tablet-right">{hockey.time}</p>
+                      <label className="hockey__mobile">LOCATION</label>
+                      <p className="hockey__tablet-right">{hockey.park}</p>
+                      <label className="hockey__mobile">ADDRESS</label>
+                      <p className="hockey__tablet-right arrow">
+                        {hockey.address}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hockey__options">
                     <Link
                       key={hockey.gameId}
                       to={`/street-hockey/${hockey.gameId}`}
                       className="hockey__game"
                     >
-                      <p className="hockey__shrink">{hockey.description}</p>
+                      <img
+                        src={arrowIcon}
+                        alt="Arrow Icon"
+                        // onClick={this.kebabClick}
+                      />
                     </Link>
-                  </div>
-                  <div className="hockey__tablet-stats">
-                    <label className="hockey__mobile">DATE</label>
-                    <p className="hockey__tablet-right">{hockey.date}</p>
-                    <label className="hockey__mobile">TIME</label>
-                    <p className="hockey__tablet-right">{hockey.time}</p>
-                    <label className="hockey__mobile">LOCATION</label>
-                    <p className="hockey__tablet-right">{hockey.park}</p>
-                    <label className="hockey__mobile">ADDRESS</label>
-                    <p className="hockey__tablet-right arrow">
-                      {hockey.address}
-                    </p>
-                  </div>
-                </div>
-                <div className="hockey__options">
-                  <Link
-                    key={hockey.gameId}
-                    to={`/street-hockey/${hockey.gameId}`}
-                    className="hockey__game"
-                  >
-                    <img
-                      src={arrowIcon}
-                      alt="Arrow Icon"
-                      // onClick={this.kebabClick}
-                    />
-                  </Link>
-                  {/* {this.state.hide ? (
+                    {/* {this.state.hide ? (
                     <div
                       className="hockey__remove"
                       onClick={() => this.removeClick(hockey.gameId)}
@@ -125,12 +126,13 @@ export default class StreetHockey extends Component {
                   ) : (
                     ""
                   )} */}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        <Footer />
+        <FooterStreetHockey />
       </div>
     );
   }

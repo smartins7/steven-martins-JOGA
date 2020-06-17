@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Comments from "../components/Comments";
 
 export default class StreetHockeyDetails extends Component {
   state = {
@@ -80,12 +81,13 @@ export default class StreetHockeyDetails extends Component {
                   </div>
                 </div>
                 <hr className="game__hr"></hr>
-                <div className="game__btn-container">
+                {/* <div className="game__btn-container">
                   <button className="game__edit-btn">EDIT</button>
-                </div>
+                </div> */}
               </div>
             );
           })}
+          <Comments />
         </div>
         <Footer />
       </>
