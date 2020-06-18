@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Comments from "../components/Comments";
+// import CommentsStreetHockey from "./CommentsStreetHockey";
 
 export default class StreetHockeyDetails extends Component {
   state = {
@@ -87,7 +87,7 @@ export default class StreetHockeyDetails extends Component {
               </div>
             );
           })}
-          <Comments />
+          {/* <CommentsStreetHockey /> */}
         </div>
         <Footer />
       </>

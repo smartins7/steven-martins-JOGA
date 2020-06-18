@@ -5,12 +5,11 @@ import add from "../assets/icons/SVG/addnew.svg";
 import basketball from "../assets/icons/SVG/basketball.svg";
 import hockey from "../assets/icons/SVG/hockey.svg";
 
-// newGameClick = (event) => {
-//   let newGameObject = document.getElementsByClassName("new-game")[0];
-//   newGameObject.style.display = "block";
-// };
+export default function FooterSoccer(props) {
+  const newGameClick = (event) => {
+    props.setFormState();
+  };
 
-export default function SoccerFooter() {
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -26,10 +25,10 @@ export default function SoccerFooter() {
         </Link>
         {/* <Link to="/soccer" className="footer__links--soccer"> */}
         <div className="footer__links">
-          {/* <div className="add-new" onClick={this.newGameClick}> */}
-          <img className="footer__icons" src={add} alt="Add New Icon" />
-          <span className="footer__icons-names">ADD NEW</span>
-          {/* </div> */}
+          <div className="add-new" onClick={newGameClick}>
+            <img className="footer__icons" src={add} alt="Add New Icon" />
+            <span className="footer__icons-names">ADD NEW</span>
+          </div>
         </div>
         {/* </Link> */}
         <Link to="/street-hockey" className="footer__links--street-hockey">

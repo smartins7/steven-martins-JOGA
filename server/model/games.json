@@ -15,7 +15,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Chris",
         "contact": "(778)-777-7777",
-        "email": "cr7@gmail.com"
+        "email": "cr7@gmail.com",
+        "messages": []
       },
       {
         "gameId": "02-SOCCER-YVR",
@@ -28,7 +29,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Luis",
         "contact": "(604)-777-7777",
-        "email": "figo_7@hotmail.com"
+        "email": "figo_7@hotmail.com",
+        "messages": []
       },
       {
         "gameId": "03-SOCCER-YVR",
@@ -41,7 +43,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Akash",
         "contact": "(604)-321-3333",
-        "email": "kash_money_baby@hotmail.com"
+        "email": "kash_money_baby@hotmail.com",
+        "messages": []
       },
       {
         "gameId": "04-SOCCER-YVR",
@@ -54,7 +57,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Riz",
         "contact": "(778)-327-1717",
-        "email": "pretty_rizzy@gmail.com"
+        "email": "pretty_rizzy@gmail.com",
+        "messages": []
       }
     ]
   },
@@ -74,7 +78,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Mike",
         "contact": "(604)-321-2323",
-        "email": "jumpman23@hotmail.com"
+        "email": "jumpman23@hotmail.com",
+        "messages": []
       },
       {
         "gameId": "02-BASKETBALL-YVR",
@@ -87,7 +92,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Steve",
         "contact": "(604)-327-5863",
-        "email": "snash@hotmail.com"
+        "email": "snash@hotmail.com",
+        "messages": []
       },
       {
         "gameId": "03-BASKETBALL-YVR",
@@ -100,7 +106,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Kyle",
         "contact": "(778)-777-6666",
-        "email": "k_lo7@gmail.com"
+        "email": "k_lo7@gmail.com",
+        "messages": []
       },
       {
         "gameId": "04-BASKETBALL-YVR",
@@ -109,11 +116,12 @@
         "park": "David Lam Park",
         "address": "1300 Pacific Blvd, V6Z 2Y1",
         "city": "Vancouver, BC",
-        "description": "Looking for two more people a for 5 vs. 5 game",
+        "description": "Looking for two more people for a 5 vs. 5 game",
         "eventStatus": "Full/Vacant",
         "organizer": "Pascal",
         "contact": "(604)-666-4848",
-        "email": "spicy_p43@hotmail.com"
+        "email": "spicy_p43@hotmail.com",
+        "messages": []
       }
     ]
   },
@@ -133,7 +141,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Wayne",
         "contact": "(604)-327-9999",
-        "email": "wg99@hotmail.com"
+        "email": "wg99@hotmail.com",
+        "messages": []
       },
       {
         "gameId": "02-STREETHOCKEY-YVR",
@@ -146,7 +155,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Austin",
         "contact": "(778)-321-1634",
-        "email": "wheel_snipe_celly@hotmail.com"
+        "email": "wheel_snipe_celly@hotmail.com",
+        "messages": []
       },
       {
         "gameId": "03-STREETHOCKEY-YVR",
@@ -159,7 +169,8 @@
         "eventStatus": "Full/Vacant",
         "organizer": "Elias",
         "contact": "(778)-340-2017",
-        "email": "ep40@gmail.com"
+        "email": "ep40@gmail.com",
+        "messages": []
       }
     ]
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 // import { Link } from "react-router-dom";
 
-export default class CreateNewSoccer extends Component {
+export default class CreateNewStreetHockey extends Component {
   constructor() {
     super();
     this.state = { checked: false };
@@ -16,7 +16,7 @@ export default class CreateNewSoccer extends Component {
   handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("http://localhost:5000/soccer", {
+      .post("http://localhost:5000/street-hockey", {
         date: event.target.date.value,
         time: event.target.time.value,
         park: event.target.park.value,
@@ -121,7 +121,7 @@ export default class CreateNewSoccer extends Component {
             </div>
             <div className="button__container">
               <button className="button__save">SAVE</button>
-              {/* <Link to="/soccer"> */}
+              {/* <Link to="/street-hockey"> */}
               <button className="button__cancel">CANCEL</button>
               {/* </Link> */}
             </div>

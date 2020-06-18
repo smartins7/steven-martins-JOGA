@@ -43,6 +43,28 @@ app
     fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
     res.json(soccerObject);
   });
+
+// app.post("/soccer/:id", (req, res) => {
+//   const gamesArray = getGames();
+//   let gamesId = "00-SOCCER-YVR-" + uuidv4();
+//   let gameIndex = gamesArray.findIndex((games) => games.name == "Soccer");
+//   const soccerObject = {
+//     gameId: gamesId,
+//     date: new Date(),
+//     time: req.body.time,
+//     park: req.body.park,
+//     address: req.body.address,
+//     city: req.body.city,
+//     description: req.body.description,
+//     eventStatus: req.body.eventStatus,
+//     organizer: req.body.organizer,
+//     contact: req.body.contact,
+//     email: req.body.email,
+//   };
+//   gamesArray[gameIndex].events.push(soccerObject);
+//   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+//   res.json(soccerObject);
+// });
 app.put("/soccer/:id", (req, res) => {
   const gamesArray = getGames();
   let gameId = req.params.id;

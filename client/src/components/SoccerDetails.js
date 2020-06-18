@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Comments from "../components/Comments";
+import CommentsSoccer from "./CommentsSoccer";
 
 export default class SoccerDetails extends Component {
   state = {
@@ -87,7 +87,7 @@ export default class SoccerDetails extends Component {
               </div>
             );
           })}
-          <Comments />
+          <CommentsSoccer eventId={this.props.match.params.id} />
         </div>
         <Footer />
       </>
