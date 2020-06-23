@@ -43,15 +43,15 @@ export default class CreateNewBasketball extends Component {
                 className="new__form-input"
                 type="text"
                 name="date"
-                placeholder="mm-dd-yyyy"
+                placeholder="mm/dd/yyyy"
                 required
               />
             </div>
-            <div className="new__form-flex margin">
+            <div className="new__form-flex">
               <label>TIME</label>
               <input
                 className="new__form-input"
-                type="time"
+                type="text"
                 name="time"
                 placeholder="Time of the game..."
                 required
@@ -75,7 +75,7 @@ export default class CreateNewBasketball extends Component {
                 required
               />
             </div>
-            <div className="new__form-flex margin">
+            <div className="new__form-flex">
               <label>CITY</label>
               <select name="city" className="new__form-input">
                 <option>Vancouver, BC</option>
@@ -122,7 +122,7 @@ export default class CreateNewBasketball extends Component {
             <div className="button__container">
               <button className="button__save">SAVE</button>
               {/* <Link to="/basketball"> */}
-              <button className="button__cancel">CANCEL</button>
+              {/* <button className="button__cancel">CANCEL</button> */}
               {/* </Link> */}
             </div>
           </form>

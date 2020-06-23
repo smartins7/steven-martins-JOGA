@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 // import { Link } from "react-router-dom";
 
+// import DateUtil from "../components/DateUtil";
+
 export default class CreateNewSoccer extends Component {
   constructor() {
     super();
@@ -15,15 +17,18 @@ export default class CreateNewSoccer extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    // const date = event.target.date.value;
     axios
       .post("http://localhost:5000/soccer", {
         date: event.target.date.value,
+        // date: DateUtil.format(date),
         time: event.target.time.value,
         park: event.target.park.value,
         address: event.target.address.value,
         city: event.target.city.value,
         description: event.target.description.value,
         organizer: event.target.organizer.value,
+        eventStatus: "Vacant",
         contact: event.target.contact.value,
         email: event.target.email.value,
       })
@@ -43,15 +48,15 @@ export default class CreateNewSoccer extends Component {
                 className="new__form-input"
                 type="text"
                 name="date"
-                placeholder="mm-dd-yyyy"
+                placeholder="mm/dd/yyyy"
                 required
               />
             </div>
-            <div className="new__form-flex margin">
+            <div className="new__form-flex">
               <label>TIME</label>
               <input
                 className="new__form-input"
-                type="time"
+                type="text"
                 name="time"
                 placeholder="Time of the game..."
                 required
@@ -75,7 +80,7 @@ export default class CreateNewSoccer extends Component {
                 required
               />
             </div>
-            <div className="new__form-flex margin">
+            <div className="new__form-flex">
               <label>CITY</label>
               <select name="city" className="new__form-input">
                 <option>Vancouver, BC</option>
@@ -121,9 +126,9 @@ export default class CreateNewSoccer extends Component {
             </div>
             <div className="button__container">
               <button className="button__save">SAVE</button>
-              {/* <Link to="/soccer"> */}
-              <button className="button__cancel">CANCEL</button>
-              {/* </Link> */}
+              {/* <Link to="/soccer">
+                <button className="button__cancel">CANCEL</button>
+              </Link> */}
             </div>
           </form>
         </div>

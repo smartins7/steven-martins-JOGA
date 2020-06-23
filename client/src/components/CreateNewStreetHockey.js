@@ -17,7 +17,8 @@ export default class CreateNewStreetHockey extends Component {
     event.preventDefault();
     axios
       .post("http://localhost:5000/street-hockey", {
-        date: event.target.date.value,
+        // date: event.target.date.value,
+        date: "06/23/2020",
         time: event.target.time.value,
         park: event.target.park.value,
         address: event.target.address.value,
@@ -43,15 +44,15 @@ export default class CreateNewStreetHockey extends Component {
                 className="new__form-input"
                 type="text"
                 name="date"
-                placeholder="mm-dd-yyyy"
+                placeholder="mm/dd/yyyy"
                 required
               />
             </div>
-            <div className="new__form-flex margin">
+            <div className="new__form-flex">
               <label>TIME</label>
               <input
                 className="new__form-input"
-                type="time"
+                type="text"
                 name="time"
                 placeholder="Time of the game..."
                 required
@@ -75,7 +76,7 @@ export default class CreateNewStreetHockey extends Component {
                 required
               />
             </div>
-            <div className="new__form-flex margin">
+            <div className="new__form-flex">
               <label>CITY</label>
               <select name="city" className="new__form-input">
                 <option>Vancouver, BC</option>
@@ -122,7 +123,7 @@ export default class CreateNewStreetHockey extends Component {
             <div className="button__container">
               <button className="button__save">SAVE</button>
               {/* <Link to="/street-hockey"> */}
-              <button className="button__cancel">CANCEL</button>
+              {/* <button className="button__cancel">CANCEL</button> */}
               {/* </Link> */}
             </div>
           </form>

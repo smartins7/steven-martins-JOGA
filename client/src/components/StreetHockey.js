@@ -202,7 +202,7 @@ export default class StreetHockey extends Component {
           {!this.state.isFormActive ? (
             <div className="hero-hockey">
               <div className="hero-hockey__container">
-                <h1 className="hero-hockey__slogan">HOCKEY</h1>
+                <h1 className="hero-hockey__slogan">STREET-HOCKEY</h1>
                 <div className="hero-hockey__desktop">
                   <h2 className="hero-hockey__description">
                     Find local pick-up street-hockey games in your area below or

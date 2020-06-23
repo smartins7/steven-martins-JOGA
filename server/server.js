@@ -28,7 +28,8 @@ app
     let gameIndex = gamesArray.findIndex((games) => games.name == "Soccer");
     const soccerObject = {
       gameId: gamesId,
-      date: new Date(),
+      // date: new Date(),
+      date: "06/23/2020",
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -38,33 +39,32 @@ app
       organizer: req.body.organizer,
       contact: req.body.contact,
       email: req.body.email,
+      messages: req.body.messages,
     };
     gamesArray[gameIndex].events.push(soccerObject);
     fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
     res.json(soccerObject);
   });
 
-// app.post("/soccer/:id", (req, res) => {
-//   const gamesArray = getGames();
-//   let gamesId = "00-SOCCER-YVR-" + uuidv4();
-//   let gameIndex = gamesArray.findIndex((games) => games.name == "Soccer");
-//   const soccerObject = {
-//     gameId: gamesId,
-//     date: new Date(),
-//     time: req.body.time,
-//     park: req.body.park,
-//     address: req.body.address,
-//     city: req.body.city,
-//     description: req.body.description,
-//     eventStatus: req.body.eventStatus,
-//     organizer: req.body.organizer,
-//     contact: req.body.contact,
-//     email: req.body.email,
-//   };
-//   gamesArray[gameIndex].events.push(soccerObject);
-//   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-//   res.json(soccerObject);
-// });
+app.post("/soccer/:id", (req, res) => {
+  const gamesArray = getGames();
+  const gameObj = gamesArray[0];
+  let messageIndex = gameObj.events.findIndex(
+    (event) => event.gameId == req.params.id
+  );
+  const soccerObject = {
+    time: new Date(),
+    name: req.body.name,
+    comment: req.body.comment,
+    messages: [],
+  };
+
+  gameObj.events[messageIndex].messages.push(soccerObject);
+  gamesArray.splice(0, 1, gameObj);
+  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  res.json(gamesArray);
+});
+
 app.put("/soccer/:id", (req, res) => {
   const gamesArray = getGames();
   let gameId = req.params.id;
@@ -92,6 +92,7 @@ app.put("/soccer/:id", (req, res) => {
 
 app.delete("/soccer/:id", (req, res) => {
   const gamesArray = getGames();
+  console.log(gamesArray);
   let gameId = req.params.id;
   let updatedEvents = [];
   for (i = 0; i < gamesArray.length; i++) {
@@ -104,7 +105,7 @@ app.delete("/soccer/:id", (req, res) => {
     }
     gamesArray[i].events = updatedEvents;
   }
-  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  // fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
   res.json(updatedEvents);
 });
 
@@ -119,9 +120,10 @@ app
     const gamesArray = getGames();
     let gamesId = "00-BASKETBALL-YVR-" + uuidv4();
     let gameIndex = gamesArray.findIndex((games) => games.name == "Basketball");
-    const soccerObject = {
+    const basketballObject = {
       gameId: gamesId,
-      date: new Date(),
+      // date: new Date(),
+      date: "06/23/2020",
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -132,10 +134,29 @@ app
       contact: req.body.contact,
       email: req.body.email,
     };
-    gamesArray[gameIndex].events.push(soccerObject);
+    gamesArray[gameIndex].events.push(basketballObject);
     fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-    res.json(soccerObject);
+    res.json(basketballObject);
   });
+
+app.post("/basketball/:id", (req, res) => {
+  const gamesArray = getGames();
+  const gameObj = gamesArray[1];
+  let messageIndex = gameObj.events.findIndex(
+    (event) => event.gameId == req.params.id
+  );
+  const basketballObject = {
+    time: new Date(),
+    name: req.body.name,
+    comment: req.body.comment,
+  };
+
+  gameObj.events[messageIndex].messages.push(basketballObject);
+  gamesArray.splice(0, 1, gameObj);
+  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  res.json(gamesArray);
+});
+
 app.put("/basketball/:id", (req, res) => {
   const gamesArray = getGames();
   let gameId = req.params.id;
@@ -192,9 +213,10 @@ app
     let gameIndex = gamesArray.findIndex(
       (games) => games.name == "Street-Hockey"
     );
-    const soccerObject = {
+    const hockeyObject = {
       gameId: gamesId,
-      date: new Date(),
+      // date: new Date(),
+      date: "06/23/2020",
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -205,10 +227,29 @@ app
       contact: req.body.contact,
       email: req.body.email,
     };
-    gamesArray[gameIndex].events.push(soccerObject);
+    gamesArray[gameIndex].events.push(hockeyObject);
     fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-    res.json(soccerObject);
+    res.json(hockeyObject);
   });
+
+app.post("/street-hockey/:id", (req, res) => {
+  const gamesArray = getGames();
+  const gameObj = gamesArray[2];
+  let messageIndex = gameObj.events.findIndex(
+    (event) => event.gameId == req.params.id
+  );
+  const hockeyObject = {
+    time: new Date(),
+    name: req.body.name,
+    comment: req.body.comment,
+  };
+
+  gameObj.events[messageIndex].messages.push(hockeyObject);
+  gamesArray.splice(0, 1, gameObj);
+  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  res.json(gamesArray);
+});
+
 app.put("/street-hockey/:id", (req, res) => {
   const gamesArray = getGames();
   let gameId = req.params.id;

@@ -1,6 +1,6 @@
 //Soccer, Basketball, and Street-Hockey Detail Section for Mobile
 .game {
-  margin: 210px 1rem 120px;
+  margin: 240px 1rem 120px;
 
   &__container {
     width: 100%;
@@ -10,6 +10,13 @@
   &__label-page {
     @include header(1.75rem, auto);
     margin-bottom: 24px;
+  }
+
+  &__mobile-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 1rem;
   }
 
   &__status {
@@ -26,6 +33,30 @@
     color: $white;
     @include paragraph(0.813rem, 1.125rem);
     margin-bottom: 0;
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  &__kebab {
+    margin-left: 1rem;
+  }
+
+  &__remove {
+    width: 90px;
+    padding: 10px;
+    margin-top: 25px;
+    right: 40px;
+    position: absolute;
+    background-color: $alabaster;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    @include paragraph(0.813rem, 1.125rem);
   }
 
   &__hr {
@@ -61,7 +92,6 @@
 
   &__address {
     @extend .game__event-description;
-    margin-bottom: 40px;
   }
 
   &__label-city {
@@ -114,6 +144,11 @@
       margin-right: 24px;
     }
 
+    &__icons {
+      margin-top: 18px;
+      margin-left: 470px;
+    }
+
     &__hr {
       visibility: visible;
     }
@@ -145,6 +180,14 @@
     &__container {
       width: 1080px;
     }
+    &__icons {
+      // margin-top: 18px;
+      margin-left: 825px;
+    }
+    &__remove {
+      right: 200px;
+    }
+
     &__description-details-container {
       display: grid;
       grid-template-columns: 50% 50%;

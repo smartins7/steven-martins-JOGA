@@ -36,24 +36,6 @@ export default class Soccer extends Component {
       .catch((err) => console.log(err));
   }
 
-  // removeClick = (id) => {
-  //   axios
-  //     .delete(`http://localhost:5000/soccer/${id}`)
-  //     .then(window.location.reload(false))
-  //     .catch((err) => console.log(err));
-  // };
-
-  // kebabClick = (event) => {
-  //   this.state.hide
-  //     ? this.setState({ hide: false })
-  //     : this.setState({ hide: true });
-  // };
-
-  // newItemClick = (event) => {
-  //   let newItemObject = document.getElementsByClassName("new-item")[0];
-  //   newItemObject.style.display = "block";
-  // };
-
   render() {
     return (
       <div>

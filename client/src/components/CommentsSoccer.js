@@ -3,26 +3,26 @@ import axios from "axios";
 import profile from "../assets/icons/SVG/profile.svg";
 
 export default function CommentsSoccer(props) {
-  console.log("comments soccer", props);
   const messageSubmit = (event) => {
     event.preventDefault();
     axios
       .post(`http://localhost:5000/soccer/${props.eventId}`, {
-        messages: [
-          {
-            name: "Steven",
-            comment: event.target.commentsComment.value,
-          },
-        ],
+        time: new Date(),
+        name: "Steven",
+        comment: event.target.commentsComment.value,
       })
       .then((res) => {
-        props.history.replace("/");
+        // console.log(res);
+        // props.history.replace("/");
+        window.location.reload();
+        event.target.reset();
       })
       .catch((err) => console.log(err));
   };
 
   return (
     <div className="comments">
+      {/* {this.state.soccerList.map((soccer) => { */}
       <h1 className="comments__title">Messages</h1>
       <div className="comments__container">
         <form
@@ -58,6 +58,10 @@ export default function CommentsSoccer(props) {
           </div>
         </form>
       </div>
+      {/* <div className="comments__messages">
+        <span className="comments__messages--new">{soccer.messages}</span>
+      </div>  */}
+      {/* })} */}
     </div>
   );
 }
