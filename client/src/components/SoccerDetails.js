@@ -188,8 +188,10 @@ export default class SoccerDetails extends Component {
                 {event.messages !== undefined ? (
                   event.messages.map((message) => (
                     <>
-                      <p className="game__messages--time">{message.time}</p>
-                      <p className="game__messages--name">{message.name}</p>
+                      <div className="game__messages--top">
+                        <h4 className="game__messages--name">{message.name}</h4>
+                        <p className="game__messages--time">{message.time}</p>
+                      </div>
                       <p className="game__messages--new">{message.comment}</p>
                     </>
                   ))

@@ -18,7 +18,7 @@ export default class CreateNewStreetHockey extends Component {
     axios
       .post("http://localhost:5000/street-hockey", {
         // date: event.target.date.value,
-        date: "06/23/2020",
+        date: "06/25/2020",
         time: event.target.time.value,
         park: event.target.park.value,
         address: event.target.address.value,
@@ -85,12 +85,15 @@ export default class CreateNewStreetHockey extends Component {
 
             <div className="new__form-flex">
               <label>ORGANIZER</label>
-              <input
+              {/* <input
                 className="new__form-input"
                 name="organizer"
                 placeholder="Your name..."
                 required
-              />
+              /> */}
+              <select name="organizer" className="new__form-input">
+                <option>Steven</option>
+              </select>
             </div>
             <div className="new__form-flex">
               <label>CONTACT</label>

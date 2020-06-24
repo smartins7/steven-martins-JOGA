@@ -1176,6 +1176,56 @@ p {
   line-height: 1.125rem;
 }
 
+.game__messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -125px;
+  max-width: 520px;
+  border-bottom: 0.063rem solid #e1e1e1;
+}
+
+.game__messages--top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game__messages--name {
+  font-family: Roboto Bold;
+  font-size: 1.2rem;
+  line-height: 0.5rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.game__messages--time {
+  font-family: Roboto Regular;
+  font-size: 0.7rem;
+  line-height: 0.625rem;
+  color: #afafaf;
+  padding-top: 5px;
+}
+
+.game__messages--new {
+  color: black;
+  font-family: Roboto Regular;
+  font-size: 0.85rem;
+  line-height: 18px;
+  padding-bottom: 1.563rem;
+}
+
 @media only screen and (min-width: 768px) {
   .game__container {
     width: 720px;
@@ -1190,6 +1240,9 @@ p {
   }
   .game__label-page {
     margin-right: 24px;
+    font-family: Roboto Bold;
+    font-size: 1.9rem;
+    line-height: auto;
   }
   .game__icons {
     margin-top: 18px;
@@ -1219,6 +1272,28 @@ p {
   .game__label-value-container {
     margin-right: auto;
   }
+  .game__messages {
+    margin-top: 10px;
+    margin: 0 auto;
+  }
+  .game__messages--name {
+    font-family: Roboto Bold;
+    font-size: 1.4rem;
+    line-height: 0.5rem;
+  }
+  .game__messages--time {
+    font-family: Roboto Regular;
+    font-size: 0.9rem;
+    line-height: 0.625rem;
+    padding-top: 25px;
+  }
+  .game__messages--new {
+    color: black;
+    font-family: Roboto Regular;
+    font-size: 1rem;
+    line-height: 18px;
+    padding-bottom: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1236,6 +1311,12 @@ p {
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
+  }
+  .game__messages {
+    padding: 0.5rem 0;
+  }
+  .game__messages--new {
+    padding-bottom: 1.9rem;
   }
 }
 
@@ -1423,14 +1504,15 @@ label {
 }
 
 .comments__title {
-  font-family: Roboto Medium;
-  font-size: 0.938rem;
-  line-height: 1.563rem;
+  font-family: Roboto Bold;
+  font-size: 1.5rem;
+  line-height: 1rem;
   color: black;
 }
 
 .comments-form {
   border-bottom: 0.063rem solid #e1e1e1;
+  padding-top: 1rem;
   padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1454,7 +1536,7 @@ label {
 .comments-form__profile {
   height: 2.813rem;
   width: 2.813rem;
-  margin-top: 1.438rem;
+  margin-top: 0rem;
 }
 
 .comments-form__input-details {
@@ -1502,6 +1584,7 @@ label {
   line-height: 1.375rem;
   height: 48px;
   width: 100%;
+  max-width: 270px;
   background-color: rgba(240, 160, 13, 0.959);
   color: #ffffff;
   border: none;
@@ -1517,29 +1600,37 @@ label {
   .comments {
     padding: 0 2rem;
     max-width: 768px;
+    margin: 0 auto;
   }
   .comments__title {
     font-family: Roboto Medium;
-    font-size: 1.188rem;
+    font-size: 1.75rem;
     line-height: 1.563rem;
   }
   .comments__profile {
     height: 3.75rem;
     width: 3.75rem;
   }
-  .comments-form__input-title {
-    font-family: Roboto Medium;
-    font-size: 0.8rem;
-    line-height: 1.563rem;
+  .comments-form {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .comments-form__content {
     font-family: Roboto Regular;
     font-size: 0.85rem;
     line-height: 1.563rem;
     border: 0.063rem solid #afafaf;
-    height: 2.5rem;
-    width: 27.813rem;
+    height: 125px;
+    width: 275px;
     padding: 0.313rem 0 0.313rem 0.625rem;
+  }
+  .comments-form__submit {
+    max-width: 340px;
   }
 }
 
@@ -1548,6 +1639,13 @@ label {
     padding: 0;
     padding-left: 11.55rem;
     max-width: 1460px;
+  }
+  .comments-form__content {
+    height: 150px;
+    width: 300px;
+  }
+  .comments-form__submit {
+    max-width: 370px;
   }
 }
 

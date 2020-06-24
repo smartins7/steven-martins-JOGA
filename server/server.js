@@ -29,7 +29,7 @@ app
     const soccerObject = {
       gameId: gamesId,
       // date: new Date(),
-      date: "06/23/2020",
+      date: "06/25/2020",
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -53,8 +53,9 @@ app.post("/soccer/:id", (req, res) => {
     (event) => event.gameId == req.params.id
   );
   const soccerObject = {
-    time: new Date(),
     name: req.body.name,
+    // time: new Date(),
+    time: "06/25/2020",
     comment: req.body.comment,
     messages: [],
   };
@@ -123,7 +124,7 @@ app
     const basketballObject = {
       gameId: gamesId,
       // date: new Date(),
-      date: "06/23/2020",
+      date: "06/25/2020",
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -146,8 +147,9 @@ app.post("/basketball/:id", (req, res) => {
     (event) => event.gameId == req.params.id
   );
   const basketballObject = {
-    time: new Date(),
     name: req.body.name,
+    // time: new Date(),
+    time: "06/25/2020",
     comment: req.body.comment,
   };
 
@@ -216,7 +218,7 @@ app
     const hockeyObject = {
       gameId: gamesId,
       // date: new Date(),
-      date: "06/23/2020",
+      date: "06/25/2020",
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -239,8 +241,9 @@ app.post("/street-hockey/:id", (req, res) => {
     (event) => event.gameId == req.params.id
   );
   const hockeyObject = {
-    time: new Date(),
     name: req.body.name,
+    // time: new Date(),
+    time: "06/25/2020",
     comment: req.body.comment,
   };
 

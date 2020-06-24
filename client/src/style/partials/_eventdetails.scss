@@ -123,6 +123,34 @@
     color: $black;
     @include paragraph(1rem, 1.125rem);
   }
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    margin-top: -125px;
+    max-width: 520px;
+    border-bottom: 0.063rem solid $mercury;
+    &--top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &--name {
+      @include header(1.2rem, 0.5rem);
+      color: $black;
+      font-weight: bolder;
+    }
+    &--time {
+      @include paragraph(0.7rem, 0.625rem);
+      color: $silver;
+      padding-top: 5px;
+    }
+    &--new {
+      color: $black;
+      @include paragraph(0.85rem, 18px);
+      padding-bottom: 1.563rem;
+    }
+  }
 }
 
 //Soccer, Basketball, and Street-Hockey Detail Section for Tablet
@@ -142,6 +170,7 @@
 
     &__label-page {
       margin-right: 24px;
+      @include header(1.9rem, auto);
     }
 
     &__icons {
@@ -171,6 +200,22 @@
     &__label-value-container {
       margin-right: auto;
     }
+    &__messages {
+      margin-top: 10px;
+      margin: 0 auto;
+      &--name {
+        @include header(1.4rem, 0.5rem);
+      }
+      &--time {
+        @include paragraph(0.9rem, 0.625rem);
+        padding-top: 25px;
+      }
+      &--new {
+        color: $black;
+        @include paragraph(1rem, 18px);
+        padding-bottom: 1.7rem;
+      }
+    }
   }
 }
 
@@ -191,6 +236,13 @@
     &__description-details-container {
       display: grid;
       grid-template-columns: 50% 50%;
+    }
+
+    &__messages {
+      padding: 0.5rem 0;
+      &--new {
+        padding-bottom: 1.9rem;
+      }
     }
   }
 }

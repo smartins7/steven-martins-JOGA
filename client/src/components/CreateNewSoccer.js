@@ -89,12 +89,15 @@ export default class CreateNewSoccer extends Component {
 
             <div className="new__form-flex">
               <label>ORGANIZER</label>
-              <input
+              {/* <input
                 className="new__form-input"
                 name="organizer"
                 placeholder="Your name..."
                 required
-              />
+              /> */}
+              <select name="organizer" className="new__form-input">
+                <option>Steven</option>
+              </select>
             </div>
             <div className="new__form-flex">
               <label>CONTACT</label>

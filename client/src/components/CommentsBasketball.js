@@ -2,14 +2,14 @@ import React from "react";
 import axios from "axios";
 import profile from "../assets/icons/SVG/profile.svg";
 
-export default function CommentsSoccer(props) {
+export default function CommentsBasketball(props) {
   const messageSubmit = (event) => {
     event.preventDefault();
     axios
-      .post(`http://localhost:5000/soccer/${props.eventId}`, {
+      .post(`http://localhost:5000/basketball/${props.eventId}`, {
         // time: new Date(),
-        name: "Steven",
         time: "06/25/2020",
+        name: "Steven",
         comment: event.target.commentsComment.value,
       })
       .then((res) => {
