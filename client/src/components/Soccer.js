@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 import FooterSoccer from "../components/FooterSoccer";
-
 import arrowIcon from "../assets/icons/SVG/Icon-arrow-right.svg";
 import CreateNewSoccer from "./CreateNewSoccer";
 

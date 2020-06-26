@@ -9,7 +9,7 @@ export default function CommentsSoccer(props) {
       .post(`http://localhost:5000/soccer/${props.eventId}`, {
         // time: new Date(),
         name: "Steven",
-        time: "06/25/2020",
+        time: "06/29/2020",
         comment: event.target.commentsComment.value,
       })
       .then((res) => {

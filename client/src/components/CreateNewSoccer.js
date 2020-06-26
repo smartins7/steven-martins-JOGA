@@ -128,7 +128,7 @@ export default class CreateNewSoccer extends Component {
               ></textarea>
             </div>
             <div className="button__container">
-              <button className="button__save">SAVE</button>
+              <button className="button__save">POST</button>
               {/* <Link to="/soccer">
                 <button className="button__cancel">CANCEL</button>
               </Link> */}

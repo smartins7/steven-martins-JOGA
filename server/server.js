@@ -28,8 +28,7 @@ app
     let gameIndex = gamesArray.findIndex((games) => games.name == "Soccer");
     const soccerObject = {
       gameId: gamesId,
-      // date: new Date(),
-      date: "06/25/2020",
+      date: req.body.date,
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -55,7 +54,8 @@ app.post("/soccer/:id", (req, res) => {
   const soccerObject = {
     name: req.body.name,
     // time: new Date(),
-    time: "06/25/2020",
+    // time: "06/25/2020",
+    time: req.body.time,
     comment: req.body.comment,
     messages: [],
   };
@@ -94,20 +94,15 @@ app.put("/soccer/:id", (req, res) => {
 app.delete("/soccer/:id", (req, res) => {
   const gamesArray = getGames();
   console.log(gamesArray);
-  let gameId = req.params.id;
-  let updatedEvents = [];
-  for (i = 0; i < gamesArray.length; i++) {
-    let eventsArray = gamesArray[i].events;
-
-    for (j = 0; j < eventsArray.length; j++) {
-      if (eventsArray[j].gameId !== gameId) {
-        updatedEvents.push(eventsArray[j]);
-      }
-    }
-    gamesArray[i].events = updatedEvents;
-  }
-  // fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-  res.json(updatedEvents);
+  const gameIndex = gamesArray[0];
+  const gameEvents = gameIndex.events;
+  const eventIndex = gameEvents.findIndex(
+    (event) => event.gameId == req.params.id
+  );
+  gameEvents.splice(eventIndex, 1);
+  gamesArray[0].events = gameEvents;
+  fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
+  res.json({ gamesArray });
 });
 
 // Get, Post, Put and Delete Basketball Event Details
@@ -123,8 +118,7 @@ app
     let gameIndex = gamesArray.findIndex((games) => games.name == "Basketball");
     const basketballObject = {
       gameId: gamesId,
-      // date: new Date(),
-      date: "06/25/2020",
+      date: req.body.date,
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -149,7 +143,8 @@ app.post("/basketball/:id", (req, res) => {
   const basketballObject = {
     name: req.body.name,
     // time: new Date(),
-    time: "06/25/2020",
+    // time: "06/25/2020",
+    time: req.body.time,
     comment: req.body.comment,
   };
 
@@ -186,20 +181,16 @@ app.put("/basketball/:id", (req, res) => {
 
 app.delete("/basketball/:id", (req, res) => {
   const gamesArray = getGames();
-  let gameId = req.params.id;
-  let updatedEvents = [];
-  for (i = 0; i < gamesArray.length; i++) {
-    let eventsArray = gamesArray[i].events;
-
-    for (j = 0; j < eventsArray.length; j++) {
-      if (eventsArray[j].gameId !== gameId) {
-        updatedEvents.push(eventsArray[j]);
-      }
-    }
-    gamesArray[i].events = updatedEvents;
-  }
+  console.log(gamesArray);
+  const gameIndex = gamesArray[1];
+  const gameEvents = gameIndex.events;
+  const eventIndex = gameEvents.findIndex(
+    (event) => event.gameId == req.params.id
+  );
+  gameEvents.splice(eventIndex, 1);
+  gamesArray[1].events = gameEvents;
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-  res.json(updatedEvents);
+  res.json({ gamesArray });
 });
 
 // Get, Post, Put and Delete Street Hockey Event Details
@@ -217,8 +208,7 @@ app
     );
     const hockeyObject = {
       gameId: gamesId,
-      // date: new Date(),
-      date: "06/25/2020",
+      date: req.body.date,
       time: req.body.time,
       park: req.body.park,
       address: req.body.address,
@@ -243,7 +233,8 @@ app.post("/street-hockey/:id", (req, res) => {
   const hockeyObject = {
     name: req.body.name,
     // time: new Date(),
-    time: "06/25/2020",
+    // time: "06/25/2020",
+    time: req.body.time,
     comment: req.body.comment,
   };
 
@@ -280,20 +271,16 @@ app.put("/street-hockey/:id", (req, res) => {
 
 app.delete("/street-hockey/:id", (req, res) => {
   const gamesArray = getGames();
-  let gameId = req.params.id;
-  let updatedEvents = [];
-  for (i = 0; i < gamesArray.length; i++) {
-    let eventsArray = gamesArray[i].events;
-
-    for (j = 0; j < eventsArray.length; j++) {
-      if (eventsArray[j].gameId !== gameId) {
-        updatedEvents.push(eventsArray[j]);
-      }
-    }
-    gamesArray[i].events = updatedEvents;
-  }
+  console.log(gamesArray);
+  const gameIndex = gamesArray[2];
+  const gameEvents = gameIndex.events;
+  const eventIndex = gameEvents.findIndex(
+    (event) => event.gameId == req.params.id
+  );
+  gameEvents.splice(eventIndex, 1);
+  gamesArray[2].events = gameEvents;
   fs.writeFileSync("./model/games.json", JSON.stringify(gamesArray));
-  res.json(updatedEvents);
+  res.json({ gamesArray });
 });
 
 // Local Host

@@ -6,7 +6,7 @@
     "events": [
       {
         "gameId": "01-SOCCER-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:00 pm",
         "park": "Memorial Park Turf",
         "address": "5955 Ross St, V5W 1T7",
@@ -21,7 +21,7 @@
       },
       {
         "gameId": "02-SOCCER-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:15 pm",
         "park": "Trillium Turf",
         "address": " 600 National Ave, V6A 0B8",
@@ -36,7 +36,7 @@
       },
       {
         "gameId": "03-SOCCER-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:30 pm",
         "park": "Andy Livingston Turf",
         "address": "89 Expo Blvd, V5Y 1V4",
@@ -51,7 +51,7 @@
       },
       {
         "gameId": "04-SOCCER-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:45 pm",
         "park": "Van Tech Turf",
         "address": "2501 Slocan St, V5K 3Y2",
@@ -73,7 +73,7 @@
     "events": [
       {
         "gameId": "01-BASKETBALL-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "5:30 pm",
         "park": " Kitsilano Beach Park",
         "address": "1499 Arbutus St, V6J 5N2",
@@ -88,7 +88,7 @@
       },
       {
         "gameId": "02-BASKETBALL-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:30 pm",
         "park": "Queen Elizabeth Park",
         "address": "4600 Cambie St, V5Z 2Z1",
@@ -103,7 +103,7 @@
       },
       {
         "gameId": "03-BASKETBALL-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "7:00 pm",
         "park": "Grays Park",
         "address": "4850 St Catherines St, V5V 4M7",
@@ -118,7 +118,7 @@
       },
       {
         "gameId": "04-BASKETBALL-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "7:15 pm",
         "park": "David Lam Park",
         "address": "1300 Pacific Blvd, V6Z 2Y1",
@@ -140,7 +140,7 @@
     "events": [
       {
         "gameId": "01-STREETHOCKEY-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "5:30 pm",
         "park": "Queen Elizabeth Park",
         "address": "4600 Cambie St, V5Z 2Z1",
@@ -155,7 +155,7 @@
       },
       {
         "gameId": "02-STREETHOCKEY-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:30 pm",
         "park": "Grays Park",
         "address": "4850 St Catherines St, V5V 4M7",
@@ -170,7 +170,7 @@
       },
       {
         "gameId": "03-STREETHOCKEY-YVR",
-        "date": "06/23/2020",
+        "date": "06/29/2020",
         "time": "6:30 pm",
         "park": "Renfrew Community Park Lacrosse Box",
         "address": "E 19th Ave, V5M 2Y3",

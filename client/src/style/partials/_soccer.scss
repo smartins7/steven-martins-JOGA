@@ -8,8 +8,9 @@
 .hero-soccer {
   &__container {
     padding: 1rem 1rem 1.25rem;
-    background: linear-gradient(($black-gradient), ($black-gradient)),
-      url(.././assets/images/soccershot.jpg);
+    // background: linear-gradient(($black-gradient), ($black-gradient)),
+    //   url(.././assets/images/soccershot.jpg);
+    background: url(.././assets/images/soccershot.jpg);
     width: 100%;
     height: 55vh;
     // height: 580px;
