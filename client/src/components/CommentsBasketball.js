@@ -7,7 +7,6 @@ export default function CommentsBasketball(props) {
     event.preventDefault();
     axios
       .post(`http://localhost:5000/basketball/${props.eventId}`, {
-        // time: new Date(),
         time: "06/29/2020",
         name: "Steven",
         comment: event.target.commentsComment.value,

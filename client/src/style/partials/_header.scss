@@ -15,7 +15,6 @@
 
   &__logo {
     display: flex;
-    // justify-content: center;
     @include logo(90px, 0);
     padding: 0 1rem;
     color: $black;

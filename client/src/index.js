@@ -4,7 +4,6 @@ import App from "./App";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Soccer from "./components/Soccer";
 import SoccerDetails from "./components/SoccerDetails";
-// import EditSoccer from "./components/EditSoccer";
 import Basketball from "./components/Basketball";
 import BasketballDetails from "./components/BasketballDetails";
 import StreetHockey from "./components/StreetHockey";
@@ -18,7 +17,6 @@ ReactDOM.render(
       <Route path="/" exact component={App} />
       <Route path="/soccer" exact component={Soccer} />
       <Route path="/soccer/:id" exact component={SoccerDetails} />
-      {/* <Route path="/soccer/:id/edit" exact component={EditSoccer} /> */}
       <Route path="/basketball" exact component={Basketball} />
       <Route path="/basketball/:id" exact component={BasketballDetails} />
       <Route path="/street-hockey" exact component={StreetHockey} />

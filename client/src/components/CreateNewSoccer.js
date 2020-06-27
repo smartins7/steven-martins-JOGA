@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import { Link } from "react-router-dom";
-
-// import DateUtil from "../components/DateUtil";
 
 export default class CreateNewSoccer extends Component {
   constructor() {
@@ -17,11 +14,9 @@ export default class CreateNewSoccer extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // const date = event.target.date.value;
     axios
       .post("http://localhost:5000/soccer", {
         date: event.target.date.value,
-        // date: DateUtil.format(date),
         time: event.target.time.value,
         park: event.target.park.value,
         address: event.target.address.value,
@@ -89,12 +84,6 @@ export default class CreateNewSoccer extends Component {
 
             <div className="new__form-flex">
               <label>ORGANIZER</label>
-              {/* <input
-                className="new__form-input"
-                name="organizer"
-                placeholder="Your name..."
-                required
-              /> */}
               <select name="organizer" className="new__form-input">
                 <option>Steven</option>
               </select>
@@ -129,9 +118,6 @@ export default class CreateNewSoccer extends Component {
             </div>
             <div className="button__container">
               <button className="button__save">POST</button>
-              {/* <Link to="/soccer">
-                <button className="button__cancel">CANCEL</button>
-              </Link> */}
             </div>
           </form>
         </div>

@@ -23,14 +23,12 @@ export default function FooterSoccer(props) {
             <span className="footer__icons-names">BASKETBALL</span>
           </div>
         </Link>
-        {/* <Link to="/soccer" className="footer__links--soccer"> */}
         <div className="footer__links">
           <div className="add-new" onClick={newGameClick}>
             <img className="footer__icons" src={add} alt="Add New Icon" />
             <span className="footer__icons-names">ADD NEW</span>
           </div>
         </div>
-        {/* </Link> */}
         <Link to="/street-hockey" className="footer__links--street-hockey">
           <div className="footer__links">
             <img

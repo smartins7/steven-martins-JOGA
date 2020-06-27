@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CommentsBasketball from "./CommentsBasketball";
 import deleteGame from "../assets/icons/SVG/delete1.svg";
-// import kebab from "../assets/icons/SVG/Icon-kebab-default.svg";
 
 export default class BasketballDetails extends Component {
   state = {
@@ -14,17 +12,6 @@ export default class BasketballDetails extends Component {
   componentDidMount() {
     console.log();
     const id = this.props.match.params.id;
-    // axios
-    //   .get("http://localhost:5000/basketball")
-    //   .then((response) => {
-    //     const res = response.data.filter((event) => {
-    //       return event.gameId === id;
-    //     });
-    //     this.setState({
-    //       game: res,
-    //     });
-    //   })
-    //   .catch((err) => console.log(err));
     this.getBasketballData(id);
   }
 
@@ -49,18 +36,8 @@ export default class BasketballDetails extends Component {
     axios
       .delete(`http://localhost:5000/basketball/${id}`)
       .then((res) => {
-        // console.log(res);
         this.props.history.push("/basketball");
-        // window.location.reload();
-        // this.getBasketballData(id);
       })
-
-      // .then(window.location.push("/basketball"))
-      // This won't work because not passing props
-      //this.props.history.goBack();
-      // .then((res) => {
-      //   props.history.replace("/");
-      // })
       .catch((err) => console.log(err));
   };
 
@@ -103,26 +80,6 @@ export default class BasketballDetails extends Component {
                       ) : (
                         ""
                       )}
-                      {/* <img
-                        className="game__kebab"
-                        src={kebab}
-                        alt="kebab Icon"
-                      />
-
-                      <Link to="/basketball/:id/edit">
-                        {this.state.hide ? (
-                          <div
-                            className="game__edit"
-                            // onClick={() => this.deleteClick(event.gameId)}
-                            onMouseOut={this.iconClick}
-                          >
-                            {" "}
-                            Edit{" "}
-                          </div>
-                        ) : (
-                          ""
-                        )}
-                      </Link> */}
                     </div>
                   </div>
                 </div>

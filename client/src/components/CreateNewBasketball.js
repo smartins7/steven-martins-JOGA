@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import { Link } from "react-router-dom";
 
 export default class CreateNewBasketball extends Component {
   constructor() {
@@ -84,12 +83,6 @@ export default class CreateNewBasketball extends Component {
 
             <div className="new__form-flex">
               <label>ORGANIZER</label>
-              {/* <input
-                className="new__form-input"
-                name="organizer"
-                placeholder="Your name..."
-                required
-              /> */}
               <select name="organizer" className="new__form-input">
                 <option>Steven</option>
               </select>
@@ -124,9 +117,6 @@ export default class CreateNewBasketball extends Component {
             </div>
             <div className="button__container">
               <button className="button__save">POST</button>
-              {/* <Link to="/basketball"> */}
-              {/* <button className="button__cancel">CANCEL</button> */}
-              {/* </Link> */}
             </div>
           </form>
         </div>

@@ -67,9 +67,6 @@ export default class Soccer extends Component {
                   <label className="soccer__tablet-right">DATE</label>
                   <label className="soccer__tablet-right">TIME</label>
                   <label className="soccer__tablet-right">LOCATION</label>
-                  {/* <label className="soccer__tablet-right soccer__tablet-spacing">
-                  ADDRESS
-                </label> */}
                 </div>
               </div>
               {this.state.soccerList.map((soccer) => {
@@ -90,18 +87,11 @@ export default class Soccer extends Component {
                       </div>
                       <div className="soccer__tablet-stats">
                         <label className="soccer__mobile">DATE</label>
-                        <p className="soccer__tablet-right">
-                          {soccer.date}
-                          {/* {new Date()} */}
-                        </p>
+                        <p className="soccer__tablet-right">{soccer.date}</p>
                         <label className="soccer__mobile">TIME</label>
                         <p className="soccer__tablet-right">{soccer.time}</p>
                         <label className="soccer__mobile">LOCATION</label>
                         <p className="soccer__tablet-right">{soccer.park}</p>
-                        {/* <label className="soccer__mobile">ADDRESS</label>
-                      <p className="soccer__tablet-right arrow">
-                        {soccer.address}
-                      </p> */}
                       </div>
                     </div>
                     <div className="soccer__options">
@@ -112,18 +102,6 @@ export default class Soccer extends Component {
                       >
                         <img src={arrowIcon} alt="Arrow Icon" />
                       </Link>
-                      {/* {this.state.hide ? (
-                    <div
-                      className="soccer__remove"
-                      onClick={() => this.removeClick(soccer.gameId)}
-                      onMouseOut={this.kebabClick}
-                    >
-                      {" "}
-                      Remove{" "}
-                    </div>
-                  ) : (
-                    ""
-                  )} */}
                     </div>
                   </div>
                 );
@@ -132,11 +110,6 @@ export default class Soccer extends Component {
           ) : (
             ""
           )}
-          {/* {this.state.isFormActive ? (
-                          <p>Form is Active</p>
-                        ) : (
-                          <p>Form is not Active</p>
-                        )} */}
           {this.state.isFormActive ? <CreateNewSoccer ref={this.myRef} /> : ""}
         </div>
         <FooterSoccer setFormState={this.setFormState} />

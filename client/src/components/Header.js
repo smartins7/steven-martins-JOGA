@@ -8,7 +8,6 @@ export default function Header() {
     <header className="nav-bar" id="nav-bar">
       <div className="nav-bar__mobile">
         <div className="nav-bar__tablet">
-          {/* Links to upload page when "upload" button is clicked and back to home page when logo is clicked. */}
           <Link to="/" className="nav-bar__logo-link">
             <h1 className="nav-bar__logo">JOGA</h1>
           </Link>

@@ -53,8 +53,6 @@ app.post("/soccer/:id", (req, res) => {
   );
   const soccerObject = {
     name: req.body.name,
-    // time: new Date(),
-    // time: "06/25/2020",
     time: req.body.time,
     comment: req.body.comment,
     messages: [],
@@ -142,8 +140,6 @@ app.post("/basketball/:id", (req, res) => {
   );
   const basketballObject = {
     name: req.body.name,
-    // time: new Date(),
-    // time: "06/25/2020",
     time: req.body.time,
     comment: req.body.comment,
   };
@@ -232,8 +228,6 @@ app.post("/street-hockey/:id", (req, res) => {
   );
   const hockeyObject = {
     name: req.body.name,
-    // time: new Date(),
-    // time: "06/25/2020",
     time: req.body.time,
     comment: req.body.comment,
   };
