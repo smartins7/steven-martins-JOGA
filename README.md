@@ -2,7 +2,7 @@
 
 The app looks best primarily at a viewport of 320x864 px, but could also be viewed at any width, as long as the height is always set to 864px. This is because there are fixed headers and footers in the app. The fixed headers and footers were styled according to the height of 864px to fit nicely with the page content.
 
-Also have HTTP PUT /soccer/:id, HTTP PUT /basketball/:id, and HTTP PUT /street-hockey/:id set-up and fully functional to edit specific sports events objects in the backend but was unable to connect this and have it functional on a front-end component in time.
+Also have HTTP PUT /soccer/:id, HTTP PUT /basketball/:id, and HTTP PUT /street-hockey/:id set-up and fully functional to edit specific sports events objects in the backend but do not have this functional in a front-end component yet.
 
 ## JOGA
 
